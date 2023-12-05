@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -7,6 +8,7 @@ public class GameManager : MonoBehaviour
     //Private variables
     [SerializeField] private int _score;
     [SerializeField] private int _scoreDeduction;
+    [SerializeField] private TextMeshProUGUI _scoreText;
 
     //Public variables
     public int Score { get { return _score; }}
@@ -26,16 +28,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
-        
+        _scoreText.text = $"Score: {_score}";
     }
 
     public void AddScore(int scoreToAdd)

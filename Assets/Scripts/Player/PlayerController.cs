@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
     void MoveCharacter(float vInput)
     {
         Vector3 movement = transform.forward * _accelerationRate;
-        Vector3 movementAcc = transform.forward * _accelerationRate * 2;
+        Vector3 movementAcc = _accelerationRate * 2 * transform.forward;
         //Debug.Log(vInput);
 
         _currentSpeed = _rb.velocity.magnitude;
@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
         {
             if (_currentSpeed > _defaultSpeed)
             {
-                _rb.AddRelativeForce(-transform.forward * _accelerationRate);
+                _rb.AddRelativeForce(_accelerationRate * 0.1f * -transform.forward);
             }
             else
             {
@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour
     {
         var rotation = _turnSpeed / _currentSpeed;
         var rotationClamped = Mathf.Clamp(rotation, 5.0f, _turnSpeed);
-        _rb.AddRelativeForce(-transform.forward * _accelerationRate * 0.1f);
+        _rb.AddRelativeForce(_accelerationRate * 0.1f * -transform.forward);
         transform.Rotate(Vector3.up, hInput * rotationClamped * Time.deltaTime);
     }
 
