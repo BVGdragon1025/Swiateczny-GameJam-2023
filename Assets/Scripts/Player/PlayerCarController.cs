@@ -8,15 +8,20 @@ public class PlayerCarController : MonoBehaviour
     public float maxMotorTorque; // maximum torque the motor can apply to wheel
     public float maxSteeringAngle; // maximum steer angle the wheel can have
 
+    private Rigidbody _rb;
+
     private void Start()
     {
-        
+        _rb = GetComponent<Rigidbody>();
     }
 
     public void FixedUpdate()
     {
-        float motor = maxMotorTorque * Input.GetAxis("Vertical");
-        float steering = maxSteeringAngle * Input.GetAxis("Horizontal");
+        float forwardInput = Input.GetAxis("Vertical");
+        float horizontalInput = Input.GetAxis("Horizontal");
+
+        float motor = maxMotorTorque * forwardInput;
+        float steering = maxSteeringAngle * horizontalInput;
 
         foreach (AxleInfo axleInfo in axleInfos)
         {
@@ -32,6 +37,12 @@ public class PlayerCarController : MonoBehaviour
             }
         }
     }
+
+    float MoveCharacter(float vInput)
+    {
+        return 0;
+    }
+
 }
 
 [System.Serializable]
