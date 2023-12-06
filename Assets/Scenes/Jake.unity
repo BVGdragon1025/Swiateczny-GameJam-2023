@@ -216,7 +216,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &458670468
 MonoBehaviour:
@@ -334,7 +334,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1178028609
 GameObject:
@@ -420,3 +420,72 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &3695549805438631288
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8401888185562159272, guid: ab54ccb047c3a484dbfb59b31226925a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401888185562159272, guid: ab54ccb047c3a484dbfb59b31226925a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.025072
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401888185562159272, guid: ab54ccb047c3a484dbfb59b31226925a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.42734224
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401888185562159272, guid: ab54ccb047c3a484dbfb59b31226925a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.438164
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401888185562159272, guid: ab54ccb047c3a484dbfb59b31226925a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -3.7493994e-33
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401888185562159272, guid: ab54ccb047c3a484dbfb59b31226925a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -6.123234e-17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401888185562159272, guid: ab54ccb047c3a484dbfb59b31226925a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401888185562159272, guid: ab54ccb047c3a484dbfb59b31226925a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 6.123234e-17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401888185562159272, guid: ab54ccb047c3a484dbfb59b31226925a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401888185562159272, guid: ab54ccb047c3a484dbfb59b31226925a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8401888185562159272, guid: ab54ccb047c3a484dbfb59b31226925a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9210512590102037010, guid: ab54ccb047c3a484dbfb59b31226925a,
+        type: 3}
+      propertyPath: m_Name
+      value: SANIEnajlepsiejszeteksturowanko
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ab54ccb047c3a484dbfb59b31226925a, type: 3}
