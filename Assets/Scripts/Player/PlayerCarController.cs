@@ -12,6 +12,7 @@ public class PlayerCarController : MonoBehaviour
     [SerializeField] private float _maxSpeedAccelerated; //maximum value of speed, when player is giving an input. In km/h.
     [SerializeField] private float _currentSteeringAngle;
     [SerializeField] private float _currentSpeed; //in km/h
+    [SerializeField] private TextMeshProUGUI _speedText;
  
     private Rigidbody _rb;
 
@@ -23,6 +24,7 @@ public class PlayerCarController : MonoBehaviour
     private void Update()
     {
         _currentSpeed = _rb.velocity.magnitude * 3.6f;
+        _speedText.text = $"Speed: {Mathf.RoundToInt(_currentSpeed)}km/h"; 
     }
 
     public void FixedUpdate()
