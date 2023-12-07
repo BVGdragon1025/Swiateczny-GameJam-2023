@@ -114,7 +114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5947289615445473450
 Transform:
   m_ObjectHideFlags: 0
@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2737925070f014439b60b94a1fb957d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axleInfos:
+  _axleInfos:
   - leftWheel: {fileID: 5947289616340817479}
     rightWheel: {fileID: 5947289614767737703}
     motor: 1
@@ -169,8 +169,8 @@ MonoBehaviour:
     rightWheel: {fileID: 5947289616560437970}
     motor: 0
     steering: 0
-  maxMotorTorque: 30
-  maxSteeringAngle: 45
+  _maxMotorTorque: 0
+  _maxSteeringAngle: 0
 --- !u!1 &5947289615848638750
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,7 +342,7 @@ WheelCollider:
     targetPosition: 1
   m_SuspensionDistance: 0.3
   m_ForceAppPointDistance: 0
-  m_Mass: 20
+  m_Mass: 10
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
     m_ExtremumSlip: 0.4
