@@ -1491,6 +1491,16 @@ PrefabInstance:
       propertyPath: _speedText
       value: 
       objectReference: {fileID: 2111821349}
+    - target: {fileID: 5947289615445473449, guid: d14d911680d05e04ab8705ac9cf79c3b,
+        type: 3}
+      propertyPath: _maxBrakingTorque
+      value: 720
+      objectReference: {fileID: 0}
+    - target: {fileID: 5947289615445473449, guid: d14d911680d05e04ab8705ac9cf79c3b,
+        type: 3}
+      propertyPath: _axleInfos.Array.data[1].breaking
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5947289615445473450, guid: d14d911680d05e04ab8705ac9cf79c3b,
         type: 3}
       propertyPath: m_RootOrder

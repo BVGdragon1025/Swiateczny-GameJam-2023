@@ -7,6 +7,7 @@ public class PlayerCarController : MonoBehaviour
 {
     [SerializeField] private List<AxleInfo> _axleInfos; // the information about each individual axle
     [SerializeField] private float _maxMotorTorque; // maximum torque the motor can apply to wheel
+    [SerializeField] private float _maxBrakingTorque; // maximum torque the motor can apply to wheel
     [SerializeField] private float _maxSteeringAngle; // maximum steer angle the wheel can have
     [SerializeField] private float _maxSpeed; //maximum value of speed, when player is not giving any input. In km/h.
     [SerializeField] private float _maxSpeedAccelerated; //maximum value of speed, when player is giving an input. In km/h.
@@ -46,8 +47,13 @@ public class PlayerCarController : MonoBehaviour
             {
                 axleInfo.leftWheel.motorTorque = MoveCharacter(forwardInput);
                 axleInfo.rightWheel.motorTorque = MoveCharacter(forwardInput);
-                axleInfo.leftWheel.brakeTorque = ReduceSpeed(forwardInput);
-                axleInfo.rightWheel.brakeTorque = ReduceSpeed(forwardInput);
+                //axleInfo.leftWheel.brakeTorque = ReduceSpeed(forwardInput);
+                //axleInfo.rightWheel.brakeTorque = ReduceSpeed(forwardInput);
+            }
+            if (axleInfo.breaking)
+            {
+                axleInfo.leftWheel.brakeTorque = Handbrake();
+                axleInfo.rightWheel.brakeTorque = Handbrake();
             }
         }
     }
@@ -88,29 +94,15 @@ public class PlayerCarController : MonoBehaviour
 
     }
 
-    void MoveCharacterRB(float vInput)
+    float Handbrake()
     {
-
-    }
-
-    float ReduceSpeed(float vInput)
-    {
-        float brakeTorque;
-
-        if(vInput == 0 && _currentSpeed > _maxSpeed)
+        if(Input.GetAxis("Jump") != 0)
         {
-            brakeTorque = _maxMotorTorque;
-            return brakeTorque;
-        }
-        else if(vInput != 0 && _currentSpeed > _maxSpeedAccelerated)
-        {
-            brakeTorque = _maxMotorTorque * 2;
-            return brakeTorque;
+            return _maxBrakingTorque;
         }
         else
         {
-            brakeTorque = 0;
-            return brakeTorque;
+            return 0;
         }
 
 
@@ -125,4 +117,5 @@ public class AxleInfo
     public WheelCollider rightWheel;
     public bool motor; // is this wheel attached to motor?
     public bool steering; // does this wheel apply steer angle?
+    public bool breaking; //is this wheel braking?
 }
