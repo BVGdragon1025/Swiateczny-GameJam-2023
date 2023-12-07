@@ -13,9 +13,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _currentSpeed;
     private Rigidbody _rb;
 
-    //Public variables
-    public Rigidbody Rb { get { return _rb; } }
-
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +32,7 @@ public class PlayerController : MonoBehaviour
     void MoveCharacter(float vInput)
     {
         Vector3 movement = transform.forward * _accelerationRate;
-        Vector3 movementAcc = _accelerationRate * 2 * transform.forward;
+        Vector3 movementAcc = (_accelerationRate * 2) * transform.forward;
         //Debug.Log(vInput);
 
         _currentSpeed = _rb.velocity.magnitude;
@@ -59,7 +56,7 @@ public class PlayerController : MonoBehaviour
             {
                 //Mathf.Clamp(_rb.velocity.magnitude, 1f, 1f);
                 _rb.AddRelativeForce(vInput * 0.1f * -transform.forward);
-                Mathf.Clamp(_rb.velocity.magnitude, _minSpeed, _minSpeed);
+                Mathf.Clamp(_rb.velocity.magnitude, _minSpeed, _minSpeed + 1f);
             }
             else
             {
@@ -74,8 +71,8 @@ public class PlayerController : MonoBehaviour
 
     void RotateCharacter(float hInput)
     {
-        var rotation = _turnSpeed / _currentSpeed;
-        var rotationClamped = Mathf.Clamp(rotation, 5.0f, _turnSpeed);
+        var rotation = _turnSpeed / (_currentSpeed * 2.0f);
+        var rotationClamped = Mathf.Clamp(rotation, 8.0f, _turnSpeed);
         _rb.AddRelativeForce(_accelerationRate * 0.1f * -transform.forward);
         transform.Rotate(Vector3.up, hInput * rotationClamped * Time.deltaTime);
     }
