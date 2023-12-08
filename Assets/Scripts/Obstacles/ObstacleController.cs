@@ -21,7 +21,7 @@ public class ObstacleController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && !GameManager.Instance.GameFinished)
         {
             GameManager.Instance.SubtractScore();
             collision.rigidbody.AddForce(-collision.transform.forward * (collision.rigidbody.mass * _knockbackForce), ForceMode.Impulse);
