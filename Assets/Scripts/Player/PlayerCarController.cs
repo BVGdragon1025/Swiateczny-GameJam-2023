@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCarController : MonoBehaviour
 {
@@ -31,10 +32,15 @@ public class PlayerCarController : MonoBehaviour
         {
             GameManager.Instance.SpawnOnCheckpoint(gameObject);
         }
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
     public void FixedUpdate()
     {
+        
         float forwardInput = Input.GetAxis("Vertical");
         float horizontalInput = Input.GetAxis("Horizontal");
 
@@ -44,13 +50,27 @@ public class PlayerCarController : MonoBehaviour
         {
             if (axleInfo.steering)
             {
-                axleInfo.leftWheel.steerAngle = steering;
-                axleInfo.rightWheel.steerAngle = steering;
+                if (!GameManager.Instance.GameFinished)
+                {
+                    axleInfo.leftWheel.steerAngle = steering;
+                    axleInfo.rightWheel.steerAngle = steering;
+                }
             }
             if (axleInfo.motor)
             {
-                axleInfo.leftWheel.motorTorque = MoveCharacter(forwardInput);
-                axleInfo.rightWheel.motorTorque = MoveCharacter(forwardInput);
+                if (!GameManager.Instance.GameFinished)
+                {
+                    axleInfo.leftWheel.motorTorque = MoveCharacter(forwardInput);
+                    axleInfo.rightWheel.motorTorque = MoveCharacter(forwardInput);
+                }
+                else
+                {
+                    axleInfo.leftWheel.motorTorque = 0;
+                    axleInfo.rightWheel.motorTorque = 0;
+                    axleInfo.leftWheel.brakeTorque = 9000;
+                    axleInfo.rightWheel.brakeTorque = 9000;
+                }
+                
 
             }
             if (axleInfo.breaking)

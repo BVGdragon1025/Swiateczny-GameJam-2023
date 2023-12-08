@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,11 +14,17 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Transform _lastCheckpoint;
     [SerializeField] private float _time;
     [SerializeField] private bool _gameFinished;
+    [SerializeField] private float _distanceToFinish;
+    [SerializeField] private GameObject _player;
+    [SerializeField] private GameObject _startingLine;
+    [SerializeField] private GameObject _finishLine;
+    [SerializeField] private Slider _progressBar;
 
     //Public variables
     public int Score { get { return _score; }}
     public int ScoreDeduction {  get { return _scoreDeduction; }}
     public bool GameFinished { get { return _gameFinished; }}
+    public float DistanceLeft { get { return _distanceToFinish; }}
     public static GameManager Instance;
 
 
@@ -43,6 +50,7 @@ public class GameManager : MonoBehaviour
         if (!_gameFinished)
         {
             CountTime();
+            CalculateDistance();
         }
     }
 
@@ -103,6 +111,16 @@ public class GameManager : MonoBehaviour
     private void CountTime()
     {
         _time += Time.deltaTime;
+    }
+
+    private void CalculateDistance()
+    {
+        //_progressBar.minValue = Vector3.Distance(_player.transform.position, _startingLine.transform.position);
+        _progressBar.maxValue = Vector3.Distance(_startingLine.transform.position, _finishLine.transform.position);
+        _distanceToFinish = Vector3.Distance(_finishLine.transform.position, _player.transform.position);
+        _progressBar.value =  _distanceToFinish;
+        Debug.Log(_progressBar.value);
+
     }
 
 }
