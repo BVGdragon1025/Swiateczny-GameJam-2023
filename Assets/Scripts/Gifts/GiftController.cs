@@ -24,7 +24,7 @@ public class GiftController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && !GameManager.Instance.GameFinished)
         {
             Debug.Log($"Player collected gift! +{_points} pts!");
             GameManager.Instance.AddScore(_points);

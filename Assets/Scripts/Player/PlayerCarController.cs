@@ -25,7 +25,12 @@ public class PlayerCarController : MonoBehaviour
     private void Update()
     {
         _currentSpeed = _rb.velocity.magnitude * 3.6f;
-        _speedText.text = $"Speed: {Mathf.RoundToInt(_currentSpeed)}km/h"; 
+        _speedText.text = $"Speed: {Mathf.RoundToInt(_currentSpeed)}km/h";
+
+        if (Input.GetKeyDown(KeyCode.Backspace) && !GameManager.Instance.GameFinished)
+        {
+            GameManager.Instance.SpawnOnCheckpoint(gameObject);
+        }
     }
 
     public void FixedUpdate()
@@ -33,7 +38,6 @@ public class PlayerCarController : MonoBehaviour
         float forwardInput = Input.GetAxis("Vertical");
         float horizontalInput = Input.GetAxis("Horizontal");
 
-        //float motor = _maxMotorTorque * forwardInput * Time.deltaTime;
         float steering = _maxSteeringAngle * horizontalInput;
 
         foreach (AxleInfo axleInfo in _axleInfos)
@@ -47,8 +51,7 @@ public class PlayerCarController : MonoBehaviour
             {
                 axleInfo.leftWheel.motorTorque = MoveCharacter(forwardInput);
                 axleInfo.rightWheel.motorTorque = MoveCharacter(forwardInput);
-                //axleInfo.leftWheel.brakeTorque = ReduceSpeed(forwardInput);
-                //axleInfo.rightWheel.brakeTorque = ReduceSpeed(forwardInput);
+
             }
             if (axleInfo.breaking)
             {
@@ -66,7 +69,6 @@ public class PlayerCarController : MonoBehaviour
         {
             if(_currentSpeed < _maxSpeed)
             {
-                //var multiplier = Mathf.Lerp()
                 motorTorque = _maxMotorTorque;
                 return motorTorque;
             }
@@ -104,7 +106,6 @@ public class PlayerCarController : MonoBehaviour
         {
             return 0;
         }
-
 
     }
 
