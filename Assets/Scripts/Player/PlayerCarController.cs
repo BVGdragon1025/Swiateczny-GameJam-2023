@@ -32,16 +32,14 @@ public class PlayerCarController : MonoBehaviour
         {
             GameManager.Instance.SpawnOnCheckpoint(gameObject);
         }
-        if(Input.GetKeyDown(KeyCode.R))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
+        
     }
 
     public void FixedUpdate()
     {
 
         bool gameFinished = GameManager.Instance.GameFinished;
+        bool gamePaused = GameManager.Instance.GamePaused;
         float forwardInput = Input.GetAxis("Vertical");
         float horizontalInput = Input.GetAxis("Horizontal");
 
@@ -51,7 +49,7 @@ public class PlayerCarController : MonoBehaviour
         {
             if (axleInfo.steering)
             {
-                if (!gameFinished)
+                if (!gameFinished || !gamePaused)
                 {
                     axleInfo.leftWheel.steerAngle = steering;
                     axleInfo.rightWheel.steerAngle = steering;
@@ -59,7 +57,7 @@ public class PlayerCarController : MonoBehaviour
             }
             if (axleInfo.motor)
             {
-                if (!gameFinished)
+                if (!gameFinished || !gamePaused)
                 {
                     axleInfo.leftWheel.motorTorque = MoveCharacter(forwardInput);
                     axleInfo.rightWheel.motorTorque = MoveCharacter(forwardInput);
@@ -70,8 +68,12 @@ public class PlayerCarController : MonoBehaviour
             {
                 if (!gameFinished)
                 {
-                    axleInfo.leftWheel.brakeTorque = Handbrake();
-                    axleInfo.rightWheel.brakeTorque = Handbrake();
+                    if (!gamePaused)
+                    {
+                        axleInfo.leftWheel.brakeTorque = Handbrake();
+                        axleInfo.rightWheel.brakeTorque = Handbrake();
+                    }
+                    
                 }
                 else
                 {
