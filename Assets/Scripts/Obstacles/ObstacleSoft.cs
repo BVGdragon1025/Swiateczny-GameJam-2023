@@ -8,13 +8,12 @@ public class ObstacleSoft : Obstacle
     [SerializeField, Range(0f,1f)] private float _slowdownMultiplier;
     [SerializeField] private float _particlePlaybackTime;
     private MeshRenderer _renderer;
-    private ParticleSystem _particles;
+    private GameObject _particles;
 
     private void Start()
     {
         _collider = GetComponent<Collider>();
         _renderer = GetComponent<MeshRenderer>();
-        _particles = GetComponent<ParticleSystem>();
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -22,7 +21,7 @@ public class ObstacleSoft : Obstacle
     {
         _collider.enabled = false;
         _renderer.enabled = false;
-        _particles.Play();
+        _particles.GetComponent<ParticleSystem>().Play();
         collision.rigidbody.AddForce(-collision.transform.forward * (collision.rigidbody.velocity.magnitude / _slowdownMultiplier));
         
     }
