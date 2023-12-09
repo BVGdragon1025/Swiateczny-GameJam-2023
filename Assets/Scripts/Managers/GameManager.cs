@@ -55,6 +55,13 @@ public class GameManager : MonoBehaviour
 
     }
 
+    private void Start()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -76,7 +83,8 @@ public class GameManager : MonoBehaviour
         
         if(Input.GetKeyDown(KeyCode.Escape) && _gameFinished)
         {
-            
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
 
         if (Input.GetKeyDown(KeyCode.R))
@@ -164,6 +172,8 @@ public class GameManager : MonoBehaviour
     private void PauseMenu()
     {
         Time.timeScale = 0;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         _isPaused = true;
         _pauseScreen.SetActive(true);
     }
@@ -172,6 +182,8 @@ public class GameManager : MonoBehaviour
     {
         _pauseScreen.SetActive(false);
         _isPaused = false;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1;
     }
 
@@ -182,7 +194,7 @@ public class GameManager : MonoBehaviour
 
     public void ShowExitToMenu()
     {
-
+        
     }
 
 }
