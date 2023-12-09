@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7863523198333613447}
   - component: {fileID: 6525437936513120802}
   - component: {fileID: 9037585852203011816}
+  - component: {fileID: 4904489433630301525}
   m_Layer: 0
   m_Name: TubaDziura
   m_TagString: Untagged
@@ -25,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7380001224378527549}
+  serializedVersion: 2
   m_LocalRotation: {x: -8.659562e-17, y: 0.7071079, z: 1.1828683e-22, w: 0.70710576}
   m_LocalPosition: {x: 821.3643, y: 260.47, z: 900.97}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -270, z: 0}
 --- !u!33 &6525437936513120802
 MeshFilter:
@@ -83,3 +84,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4904489433630301525
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7380001224378527549}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6279805440374937235, guid: fdd9f215a4368db4fb7eb56481716acc, type: 3}
