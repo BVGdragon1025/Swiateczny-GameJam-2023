@@ -60760,6 +60760,31 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 567155874325949226, guid: d14d911680d05e04ab8705ac9cf79c3b,
+        type: 3}
+      propertyPath: EmissionModule.rateOverDistance.scalar
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782843279082150664, guid: d14d911680d05e04ab8705ac9cf79c3b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.1998
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782843279082150664, guid: d14d911680d05e04ab8705ac9cf79c3b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0115
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782843279082150664, guid: d14d911680d05e04ab8705ac9cf79c3b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.3451
+      objectReference: {fileID: 0}
+    - target: {fileID: 5947289614767737703, guid: d14d911680d05e04ab8705ac9cf79c3b,
+        type: 3}
+      propertyPath: m_Mass
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 5947289614767737703, guid: d14d911680d05e04ab8705ac9cf79c3b,
         type: 3}
       propertyPath: m_Radius
@@ -60769,6 +60794,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlayerCar
+      objectReference: {fileID: 0}
+    - target: {fileID: 5947289615445473449, guid: d14d911680d05e04ab8705ac9cf79c3b,
+        type: 3}
+      propertyPath: _axleInfos.Array.data[0].motor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5947289615445473449, guid: d14d911680d05e04ab8705ac9cf79c3b,
+        type: 3}
+      propertyPath: _axleInfos.Array.data[1].motor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5947289615445473449, guid: d14d911680d05e04ab8705ac9cf79c3b,
+        type: 3}
+      propertyPath: _axleInfos.Array.data[0].breaking
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5947289615445473449, guid: d14d911680d05e04ab8705ac9cf79c3b,
+        type: 3}
+      propertyPath: _axleInfos.Array.data[0].steering
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5947289615445473449, guid: d14d911680d05e04ab8705ac9cf79c3b,
+        type: 3}
+      propertyPath: _axleInfos.Array.data[1].breaking
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5947289615445473449, guid: d14d911680d05e04ab8705ac9cf79c3b,
+        type: 3}
+      propertyPath: _axleInfos.Array.data[1].steering
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5947289615445473450, guid: d14d911680d05e04ab8705ac9cf79c3b,
         type: 3}
@@ -60820,10 +60875,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5947289615445473451, guid: d14d911680d05e04ab8705ac9cf79c3b,
+        type: 3}
+      propertyPath: m_Mass
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 5947289615848638748, guid: d14d911680d05e04ab8705ac9cf79c3b,
+        type: 3}
+      propertyPath: m_Mass
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 5947289615848638748, guid: d14d911680d05e04ab8705ac9cf79c3b,
         type: 3}
       propertyPath: m_Radius
       value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5947289616340817479, guid: d14d911680d05e04ab8705ac9cf79c3b,
+        type: 3}
+      propertyPath: m_Mass
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5947289616340817479, guid: d14d911680d05e04ab8705ac9cf79c3b,
         type: 3}
@@ -60832,8 +60902,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5947289616560437970, guid: d14d911680d05e04ab8705ac9cf79c3b,
         type: 3}
+      propertyPath: m_Mass
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5947289616560437970, guid: d14d911680d05e04ab8705ac9cf79c3b,
+        type: 3}
       propertyPath: m_Radius
       value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8657918975140221508, guid: d14d911680d05e04ab8705ac9cf79c3b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.2017
+      objectReference: {fileID: 0}
+    - target: {fileID: 8657918975140221508, guid: d14d911680d05e04ab8705ac9cf79c3b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0115
+      objectReference: {fileID: 0}
+    - target: {fileID: 8657918975140221508, guid: d14d911680d05e04ab8705ac9cf79c3b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.3451
+      objectReference: {fileID: 0}
+    - target: {fileID: 8677451709106161116, guid: d14d911680d05e04ab8705ac9cf79c3b,
+        type: 3}
+      propertyPath: EmissionModule.rateOverDistance.scalar
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
