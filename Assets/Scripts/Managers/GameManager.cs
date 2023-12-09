@@ -8,9 +8,15 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     //Private variables
+    [SerializeField] private int _gifts;
     [SerializeField] private int _score;
     [SerializeField] private int _scoreDeduction;
+    [Header("UI Section")]
     [SerializeField] private TextMeshProUGUI _scoreText;
+    [SerializeField] private TextMeshProUGUI _giftScore;
+    [SerializeField] private TextMeshProUGUI _finalTime;
+    [SerializeField] private GameObject _victoryScreen;
+    [Header("Other section")]
     [SerializeField] private Transform _lastCheckpoint;
     [SerializeField] private float _time;
     [SerializeField] private bool _gameFinished;
@@ -19,6 +25,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject _startingLine;
     [SerializeField] private GameObject _finishLine;
     [SerializeField] private Slider _progressBar;
+
 
     //Public variables
     public int Score { get { return _score; }}
@@ -46,7 +53,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _scoreText.text = $"Gifts: {_score}";
+        _scoreText.text = $"{_gifts}";
         if (!_gameFinished)
         {
             CountTime();
@@ -56,6 +63,7 @@ public class GameManager : MonoBehaviour
 
     public void AddScore(int scoreToAdd)
     {
+        _gifts++;
         _score += scoreToAdd;
     }
 
@@ -93,19 +101,23 @@ public class GameManager : MonoBehaviour
         float timeInSeconds = Mathf.FloorToInt(_time % 60);
         float timeInMiliseconds = (_time % 1) * 1000;
 
-        string giftsCollected;
-
-        if(_score > 0)
-        {
-            giftsCollected = $"{_score / _score}";
-        }
-        else{
-            giftsCollected = "0";
-        }
-
-
         string finalTime = string.Format("{0:00}:{1:00}:{2:000}", timeInMinutes, timeInSeconds, timeInMiliseconds);
-        Debug.Log($"Your score: {giftsCollected} gifts X 10 = {_score}, Time: {finalTime}");
+        string scoreMultiplier;
+
+        if(_score == 0 || _gifts == 0)
+        {
+            scoreMultiplier = "10";
+        }
+        else
+        {
+            scoreMultiplier = (_score / _gifts).ToString();
+        }
+
+        _giftScore.text = $"Prezenty: {_gifts} x {scoreMultiplier} = {_score}";
+        _finalTime.text = $"Czas przejazdu: {finalTime}";
+        _victoryScreen.SetActive(true);
+
+        Debug.Log($"Your score: {_score} gifts X 10 = {_score}, Time: {finalTime}");
     }
 
     private void CountTime()
