@@ -26,21 +26,20 @@ public class PlayerCarController : MonoBehaviour
     private void Update()
     {
         _currentSpeed = _rb.velocity.magnitude * 3.6f;
-        //_speedText.text = $"Speed: {Mathf.RoundToInt(_currentSpeed)}km/h";
+        Debug.Log($"Speed: {Mathf.RoundToInt(_currentSpeed)}km/h");
 
         if (Input.GetKeyDown(KeyCode.Backspace) && !GameManager.Instance.GameFinished)
         {
             GameManager.Instance.SpawnOnCheckpoint(gameObject);
         }
-        if(Input.GetKeyDown(KeyCode.R))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
+        
     }
 
     public void FixedUpdate()
     {
-        
+
+        bool gameFinished = GameManager.Instance.GameFinished;
+        bool gamePaused = GameManager.Instance.GamePaused;
         float forwardInput = Input.GetAxis("Vertical");
         float horizontalInput = Input.GetAxis("Horizontal");
 
@@ -50,7 +49,7 @@ public class PlayerCarController : MonoBehaviour
         {
             if (axleInfo.steering)
             {
-                if (!GameManager.Instance.GameFinished)
+                if (!gameFinished || !gamePaused)
                 {
                     axleInfo.leftWheel.steerAngle = steering;
                     axleInfo.rightWheel.steerAngle = steering;
@@ -58,25 +57,30 @@ public class PlayerCarController : MonoBehaviour
             }
             if (axleInfo.motor)
             {
-                if (!GameManager.Instance.GameFinished)
+                if (!gameFinished || !gamePaused)
                 {
                     axleInfo.leftWheel.motorTorque = MoveCharacter(forwardInput);
                     axleInfo.rightWheel.motorTorque = MoveCharacter(forwardInput);
                 }
-                else
-                {
-                    axleInfo.leftWheel.motorTorque = 0;
-                    axleInfo.rightWheel.motorTorque = 0;
-                    axleInfo.leftWheel.brakeTorque = 9000;
-                    axleInfo.rightWheel.brakeTorque = 9000;
-                }
-                
 
             }
             if (axleInfo.breaking)
             {
-                axleInfo.leftWheel.brakeTorque = Handbrake();
-                axleInfo.rightWheel.brakeTorque = Handbrake();
+                if (!gameFinished)
+                {
+                    if (!gamePaused)
+                    {
+                        axleInfo.leftWheel.brakeTorque = Handbrake();
+                        axleInfo.rightWheel.brakeTorque = Handbrake();
+                    }
+                    
+                }
+                else
+                {
+                    axleInfo.leftWheel.brakeTorque = _maxBrakingTorque * 4;
+                    axleInfo.rightWheel.brakeTorque = _maxBrakingTorque * 4;
+                }
+                    
             }
         }
     }

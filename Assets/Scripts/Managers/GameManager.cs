@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -16,10 +17,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _giftScore;
     [SerializeField] private TextMeshProUGUI _finalTime;
     [SerializeField] private GameObject _victoryScreen;
+    [SerializeField] private GameObject _pauseScreen;
     [Header("Other section")]
     [SerializeField] private Transform _lastCheckpoint;
     [SerializeField] private float _time;
     [SerializeField] private bool _gameFinished;
+    [SerializeField] private bool _isPaused;
     [SerializeField] private float _distanceToFinish;
     [SerializeField] private GameObject _player;
     [SerializeField] private GameObject _startingLine;
@@ -31,6 +34,7 @@ public class GameManager : MonoBehaviour
     public int Score { get { return _score; }}
     public int ScoreDeduction {  get { return _scoreDeduction; }}
     public bool GameFinished { get { return _gameFinished; }}
+    public bool GamePaused { get { return _isPaused; }}
     public float DistanceLeft { get { return _distanceToFinish; }}
     public static GameManager Instance;
 
@@ -47,6 +51,7 @@ public class GameManager : MonoBehaviour
         }
 
         _gameFinished = false;
+        _isPaused = false;
 
     }
 
@@ -59,6 +64,26 @@ public class GameManager : MonoBehaviour
             CountTime();
             CalculateDistance();
         }
+
+        if(Input.GetKeyDown(KeyCode.Escape) && !_isPaused && !_gameFinished)
+        {
+            PauseMenu();
+        }
+        else if(Input.GetKeyDown(KeyCode.Escape) && _isPaused && !_gameFinished)
+        {
+            ContinueGame();
+        }
+        
+        if(Input.GetKeyDown(KeyCode.Escape) && _gameFinished)
+        {
+            
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            RestartGame();   
+        }
+
     }
 
     public void AddScore(int scoreToAdd)
@@ -123,6 +148,7 @@ public class GameManager : MonoBehaviour
     private void CountTime()
     {
         _time += Time.deltaTime;
+        Debug.Log($"Time: {_time}");
     }
 
     private void CalculateDistance()
@@ -132,6 +158,30 @@ public class GameManager : MonoBehaviour
         _distanceToFinish = Vector3.Distance(_finishLine.transform.position, _player.transform.position);
         _progressBar.value =  _distanceToFinish;
         Debug.Log(_progressBar.value);
+
+    }
+
+    private void PauseMenu()
+    {
+        Time.timeScale = 0;
+        _isPaused = true;
+        _pauseScreen.SetActive(true);
+    }
+
+    public void ContinueGame()
+    {
+        _pauseScreen.SetActive(false);
+        _isPaused = false;
+        Time.timeScale = 1;
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void ShowExitToMenu()
+    {
 
     }
 
