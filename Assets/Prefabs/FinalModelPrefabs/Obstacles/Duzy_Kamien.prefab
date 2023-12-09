@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5778709743986513551}
   - component: {fileID: 7466337545293961514}
   - component: {fileID: 4645803011727715808}
+  - component: {fileID: 448551803521028917}
   m_Layer: 0
   m_Name: Duzy_Kamien
   m_TagString: Untagged
@@ -25,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6591520848037268533}
+  serializedVersion: 2
   m_LocalRotation: {x: -7.284894e-18, y: 0.76408535, z: 8.628873e-17, w: -0.6451152}
   m_LocalPosition: {x: 820.0277, y: 259.7, z: 884.7723}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -99.651, z: 0}
 --- !u!33 &7466337545293961514
 MeshFilter:
@@ -83,3 +84,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &448551803521028917
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6591520848037268533}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.52
+  m_Height: 8.23
+  m_Direction: 1
+  m_Center: {x: 0.25, y: 3.33, z: -0.09}
