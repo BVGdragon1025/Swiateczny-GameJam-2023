@@ -50,6 +50,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
 
+        Time.timeScale = 1;
         _gameFinished = false;
         _isPaused = false;
 
