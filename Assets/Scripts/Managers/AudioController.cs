@@ -25,11 +25,6 @@ public class AudioController : MonoBehaviour
 
         _audioSource = GetComponent<AudioSource>();
 
-
-
-#if !UNITY_EDITOR
-     DontDestroyOnLoad(gameObject);   
-#endif
     }
 
     private void Start()
