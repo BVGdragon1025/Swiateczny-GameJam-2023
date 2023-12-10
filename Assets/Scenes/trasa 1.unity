@@ -8074,12 +8074,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 324442806}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &327445597 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5947289615445473450, guid: d14d911680d05e04ab8705ac9cf79c3b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1039799757}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &333325974 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7863523198333613447, guid: a077c3b2d81596e438f543e3f740f469,
@@ -64852,7 +64846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eeb35ca9ba96274692a3d197db91000, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  car: {fileID: 327445597}
+  car: {fileID: 1486251265}
   distance: 13.5
   height: 5
   rotationDamping: 3
@@ -68126,6 +68120,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlayerCar (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5947289615445473444, guid: d14d911680d05e04ab8705ac9cf79c3b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5947289615445473449, guid: d14d911680d05e04ab8705ac9cf79c3b,
         type: 3}
@@ -75540,7 +75539,7 @@ PrefabInstance:
     - target: {fileID: 5947289615445473444, guid: d14d911680d05e04ab8705ac9cf79c3b,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5947289615445473449, guid: d14d911680d05e04ab8705ac9cf79c3b,
         type: 3}
@@ -75550,7 +75549,7 @@ PrefabInstance:
     - target: {fileID: 5947289615445473449, guid: d14d911680d05e04ab8705ac9cf79c3b,
         type: 3}
       propertyPath: _axleInfos.Array.data[1].motor
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5947289615445473449, guid: d14d911680d05e04ab8705ac9cf79c3b,
         type: 3}
@@ -75621,11 +75620,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5947289615445473451, guid: d14d911680d05e04ab8705ac9cf79c3b,
-        type: 3}
-      propertyPath: m_Mass
-      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 5947289615848638748, guid: d14d911680d05e04ab8705ac9cf79c3b,
         type: 3}
