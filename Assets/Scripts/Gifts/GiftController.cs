@@ -15,10 +15,10 @@ public class GiftController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && !GameManager.Instance.GameFinished)
         {
-            AudioController.Instance.PlaySound(_pickUpSound);
             Debug.Log($"Player collected gift! +{_points} pts!");
             GameManager.Instance.AddScore(_points);
             gameObject.SetActive(false);
+            AudioController.Instance.PlaySound(_pickUpSound);
         }
     }
 
