@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class ObstacleSoft : Obstacle
 {
-    [SerializeField] private Collider _collider;
+    private Collider _collider;
     [SerializeField, Range(0f,1f)] private float _slowdownMultiplier;
     [SerializeField] private float _particlePlaybackTime;
     private MeshRenderer _renderer;
-    private GameObject _particles;
+    [SerializeField] private GameObject _particles;
 
     private void Start()
     {
@@ -21,7 +21,7 @@ public class ObstacleSoft : Obstacle
     {
         _collider.enabled = false;
         _renderer.enabled = false;
-        _particles.GetComponent<ParticleSystem>().Play();
+        _particles.SetActive(true);
         collision.rigidbody.AddForce(-collision.transform.forward * (collision.rigidbody.velocity.magnitude / _slowdownMultiplier));
         
     }

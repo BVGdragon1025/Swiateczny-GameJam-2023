@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AudioController : MonoBehaviour
 {
+    private AudioSource _audioSource;
+
     public float musicVolume;
     public float sfxVolume;
 
@@ -19,18 +21,8 @@ public class AudioController : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        _audioSource = GetComponent<AudioSource>();
     }
 
     public void PlaySound(AudioClip audioClip, AudioSource audioSource)
@@ -47,6 +39,20 @@ public class AudioController : MonoBehaviour
         audioSource.PlayOneShot(audioClip, sfxVolume);
     }
 
+    public void PlaySound(AudioClip audioClip)
+    {
+        if (PlayerPrefs.HasKey("SfxVolume"))
+        {
+            sfxVolume = PlayerPrefs.GetFloat("SfxVolume");
+        }
+        else
+        {
+            sfxVolume = 1;
+        }
+
+        _audioSource.PlayOneShot(audioClip, sfxVolume);
+    }
+
     public void PlayMusic(AudioClip audioClip, AudioSource audioSource)
     {
         if (PlayerPrefs.HasKey("MusicVolume"))
@@ -55,10 +61,24 @@ public class AudioController : MonoBehaviour
         }   
         else
         {   
-            musicVolume = 1;
+            musicVolume = 0.5f;
         }
 
         audioSource.PlayOneShot(audioClip, musicVolume);
+    }
+
+    public void PlayMusic(AudioClip audioClip)
+    {
+        if (PlayerPrefs.HasKey("MusicVolume"))
+        {
+            musicVolume = PlayerPrefs.GetFloat("MusicVolume");
+        }
+        else
+        {
+            musicVolume = 0.5f;
+        }
+
+        _audioSource.PlayOneShot(audioClip, musicVolume);
     }
 
 }
