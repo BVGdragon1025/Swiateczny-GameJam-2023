@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -16,11 +18,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _scoreText;
     [SerializeField] private TextMeshProUGUI _giftScore;
     [SerializeField] private TextMeshProUGUI _finalTime;
+    [SerializeField] private TextMeshProUGUI _finalScore;
     [SerializeField] private GameObject _victoryScreen;
     [SerializeField] private GameObject _pauseScreen;
     [Header("Other section")]
     [SerializeField] private Transform _lastCheckpoint;
     [SerializeField] private float _time;
+    [SerializeField] private float _targetTime;
     [SerializeField] private bool _gameFinished;
     [SerializeField] private bool _isPaused;
     [SerializeField] private float _distanceToFinish;
@@ -28,6 +32,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject _startingLine;
     [SerializeField] private GameObject _finishLine;
     [SerializeField] private Slider _progressBar;
+    [Header("Fireworks")]
+    [SerializeField] private List<GameObject> _fireworks;
+    [SerializeField] private AudioClip _fireworksSound;
 
 
     //Public variables
@@ -126,6 +133,12 @@ public class GameManager : MonoBehaviour
     {
         _gameFinished = true;
         Debug.Log("Race finished!");
+        for(int i = 0; i < _fireworks.Count; i++)
+        {
+            _fireworks[i].SetActive(true);
+            AudioController.Instance.PlaySound(_fireworksSound);
+        }
+
         ShowFinishScreen();
     }
 
@@ -147,11 +160,14 @@ public class GameManager : MonoBehaviour
             scoreMultiplier = (_score / _gifts).ToString();
         }
 
+        
         _giftScore.text = $"Prezenty: {_gifts} x {scoreMultiplier} = {_score}";
         _finalTime.text = $"Czas przejazdu: {finalTime}";
+        FinalScore();
         _victoryScreen.SetActive(true);
 
-        Debug.Log($"Your score: {_score} gifts X 10 = {_score}, Time: {finalTime}");
+        Debug.Log($"Your score: {_score} gifts X 10 = {_score}, Time: {finalTime}. Final score: {_finalScore}");
+        
     }
 
     private void CountTime()
@@ -167,6 +183,21 @@ public class GameManager : MonoBehaviour
         _distanceToFinish = Vector3.Distance(_finishLine.transform.position, _player.transform.position);
         _progressBar.value =  _distanceToFinish;
         Debug.Log(_progressBar.value);
+
+    }
+
+    private void FinalScore()
+    {
+        int tempScore = 0;
+
+        if(_time <= _targetTime)
+        {
+            tempScore += Convert.ToInt32(_targetTime - _time) * 10;
+        }
+
+        tempScore += _score;
+
+        _finalScore.text = $"Wynik koñcowy: {tempScore}";
 
     }
 
@@ -195,7 +226,7 @@ public class GameManager : MonoBehaviour
 
     public void ShowExitToMenu()
     {
-        
+        SceneManager.LoadScene(0);
     }
 
 }
