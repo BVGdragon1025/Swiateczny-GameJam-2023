@@ -22,6 +22,8 @@ public class PlayerParticleController : MonoBehaviour
     void Update()
     {
         ToggleParticles();
+        CheckWheels();
+    
     }
 
     void ToggleParticles()
