@@ -55,7 +55,7 @@ MonoBehaviour:
   _pauseScreen: {fileID: 0}
   _lastCheckpoint: {fileID: 0}
   _time: 0
-  _targetTime: 300
+  _targetTime: 60
   _gameFinished: 0
   _isPaused: 0
   _distanceToFinish: 0
