@@ -44,12 +44,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2382df55248129f439f554a2d3fb411d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gifts: 0
   _score: 0
   _scoreDeduction: 5
   _scoreText: {fileID: 0}
+  _giftScore: {fileID: 0}
+  _finalTime: {fileID: 0}
+  _finalScore: {fileID: 0}
+  _victoryScreen: {fileID: 0}
+  _pauseScreen: {fileID: 0}
   _lastCheckpoint: {fileID: 0}
   _time: 0
+  _targetTime: 300
   _gameFinished: 0
+  _isPaused: 0
   _distanceToFinish: 0
   _player: {fileID: 0}
+  _startingLine: {fileID: 0}
   _finishLine: {fileID: 0}
+  _progressBar: {fileID: 0}
+  _fireworks:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _fireworksSound: {fileID: 8300000, guid: a01818094b76a0043927a29946db2b79, type: 3}
