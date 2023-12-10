@@ -19,6 +19,11 @@ public class ObstacleSoft : Obstacle
 
     public override void ObstacleHit(Collision collision)
     {
+        if (CompareTag("Snowman"))
+        {
+            GameManager.Instance.killedSnowmans++;
+        }
+
         _collider.enabled = false;
         _renderer.enabled = false;
         _particles.SetActive(true);

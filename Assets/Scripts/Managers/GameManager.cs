@@ -14,8 +14,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int _gifts;
     [SerializeField] private int _score;
     [SerializeField] private int _scoreDeduction;
+    [SerializeField] public int killedSnowmans;
     [Header("UI Section")]
     [SerializeField] private TextMeshProUGUI _scoreText;
+    [SerializeField] private TextMeshProUGUI _deadSnowmanText;
     [SerializeField] private TextMeshProUGUI _giftScore;
     [SerializeField] private TextMeshProUGUI _finalTime;
     [SerializeField] private TextMeshProUGUI _finalScore;
@@ -74,6 +76,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         _scoreText.text = $"{_gifts}";
+        _deadSnowmanText.text = $"{killedSnowmans}";
         if (!_gameFinished)
         {
             CountTime();

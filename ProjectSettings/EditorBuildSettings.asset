@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/trasa 1.unity
     guid: 4cf6246296d31464aaa2704956681a3e
+  - enabled: 1
+    path: Assets/Scenes/TRASA2JAKE.unity
+    guid: 3e78967bb4e24594aa51a6435b51108b
   m_configObjects: {}

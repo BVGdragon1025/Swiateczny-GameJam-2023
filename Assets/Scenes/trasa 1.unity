@@ -62601,6 +62601,11 @@ PrefabInstance:
       objectReference: {fileID: 1069673066}
     - target: {fileID: 9123593147243555456, guid: 7e1594191d220ef4f8a148328490b3dd,
         type: 3}
+      propertyPath: _deadSnowmanText
+      value: 
+      objectReference: {fileID: 1968523490}
+    - target: {fileID: 9123593147243555456, guid: 7e1594191d220ef4f8a148328490b3dd,
+        type: 3}
       propertyPath: _fireworks.Array.data[0]
       value: 
       objectReference: {fileID: 1508496707}
@@ -91459,6 +91464,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58d9b124c89c9d34085f5829ee2fa668, type: 3}
+--- !u!114 &1968523490 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8491606998239037592, guid: 287942068bef3de4d999e3df375b87af,
+    type: 3}
+  m_PrefabInstance: {fileID: 1742588865}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1975783569
 PrefabInstance:
   m_ObjectHideFlags: 0
