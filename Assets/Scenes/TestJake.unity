@@ -2976,7 +2976,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 652638415}
+    m_TransformParent: {fileID: 1486251265}
     m_Modifications:
     - target: {fileID: 2593887851830311770, guid: 810645095b09b114abfe1c633df5eb25,
         type: 3}
@@ -2986,52 +2986,52 @@ PrefabInstance:
     - target: {fileID: 2933118715765170656, guid: 810645095b09b114abfe1c633df5eb25,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.44159937
+      value: 4.0757995
       objectReference: {fileID: 0}
     - target: {fileID: 2933118715765170656, guid: 810645095b09b114abfe1c633df5eb25,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.44159946
+      value: 4.0758
       objectReference: {fileID: 0}
     - target: {fileID: 2933118715765170656, guid: 810645095b09b114abfe1c633df5eb25,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.44159937
+      value: 4.0757995
       objectReference: {fileID: 0}
     - target: {fileID: 2933118715765170656, guid: 810645095b09b114abfe1c633df5eb25,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.4524333
+      value: -0.024216747
       objectReference: {fileID: 0}
     - target: {fileID: 2933118715765170656, guid: 810645095b09b114abfe1c633df5eb25,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.886276
+      value: 0.8779907
       objectReference: {fileID: 0}
     - target: {fileID: 2933118715765170656, guid: 810645095b09b114abfe1c633df5eb25,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -71.48461
+      value: 0.48800492
       objectReference: {fileID: 0}
     - target: {fileID: 2933118715765170656, guid: 810645095b09b114abfe1c633df5eb25,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.651234
+      value: 0.009770126
       objectReference: {fileID: 0}
     - target: {fileID: 2933118715765170656, guid: 810645095b09b114abfe1c633df5eb25,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 6.591186e-18
+      value: -7.5052566e-24
       objectReference: {fileID: 0}
     - target: {fileID: 2933118715765170656, guid: 810645095b09b114abfe1c633df5eb25,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.758877
+      value: 0.9999523
       objectReference: {fileID: 0}
     - target: {fileID: 2933118715765170656, guid: 810645095b09b114abfe1c633df5eb25,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -8.634425e-17
+      value: -3.87424e-23
       objectReference: {fileID: 0}
     - target: {fileID: 2933118715765170656, guid: 810645095b09b114abfe1c633df5eb25,
         type: 3}
@@ -3041,12 +3041,17 @@ PrefabInstance:
     - target: {fileID: 2933118715765170656, guid: 810645095b09b114abfe1c633df5eb25,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -44.094
+      value: 233.73001
       objectReference: {fileID: 0}
     - target: {fileID: 2933118715765170656, guid: 810645095b09b114abfe1c633df5eb25,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3333408717040013838, guid: 810645095b09b114abfe1c633df5eb25,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -35788,7 +35793,6 @@ Transform:
   m_LocalScale: {x: 9.229632, y: 9.22963, z: 9.229632}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 76835995}
   - {fileID: 1527374006}
   - {fileID: 1781586234}
   - {fileID: 1443086251}
@@ -62241,7 +62245,7 @@ PrefabInstance:
     - target: {fileID: 567155874325949226, guid: d14d911680d05e04ab8705ac9cf79c3b,
         type: 3}
       propertyPath: NoiseModule.strength.scalar
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 567155874325949226, guid: d14d911680d05e04ab8705ac9cf79c3b,
         type: 3}
@@ -62461,7 +62465,7 @@ PrefabInstance:
     - target: {fileID: 8677451709106161116, guid: d14d911680d05e04ab8705ac9cf79c3b,
         type: 3}
       propertyPath: NoiseModule.strength.scalar
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8677451709106161116, guid: d14d911680d05e04ab8705ac9cf79c3b,
         type: 3}
@@ -62490,7 +62494,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5947289615445473450, guid: d14d911680d05e04ab8705ac9cf79c3b,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 76835995}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d14d911680d05e04ab8705ac9cf79c3b, type: 3}
 --- !u!1001 &1407225027
