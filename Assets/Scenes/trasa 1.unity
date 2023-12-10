@@ -62745,6 +62745,11 @@ PrefabInstance:
       objectReference: {fileID: 1954637938}
     - target: {fileID: 9123593147243555456, guid: 7e1594191d220ef4f8a148328490b3dd,
         type: 3}
+      propertyPath: _targetTime
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 9123593147243555456, guid: 7e1594191d220ef4f8a148328490b3dd,
+        type: 3}
       propertyPath: _pauseScreen
       value: 
       objectReference: {fileID: 1993250906}
@@ -84327,6 +84332,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 809477343}
+    - target: {fileID: 2392752724368335643, guid: 287942068bef3de4d999e3df375b87af,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3413104033398170476, guid: 287942068bef3de4d999e3df375b87af,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -84367,10 +84377,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 809477343}
+    - target: {fileID: 8526118123417017274, guid: 287942068bef3de4d999e3df375b87af,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 809477343}
+    - target: {fileID: 8526118123417017274, guid: 287942068bef3de4d999e3df375b87af,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowExitToMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 9013674827311400753, guid: 287942068bef3de4d999e3df375b87af,
         type: 3}
       propertyPath: m_Name
       value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106963248366824556, guid: 287942068bef3de4d999e3df375b87af,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 809477343}
+    - target: {fileID: 9106963248366824556, guid: 287942068bef3de4d999e3df375b87af,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartGame
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
