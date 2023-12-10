@@ -301,17 +301,17 @@ PrefabInstance:
     - target: {fileID: 6588267663567231878, guid: cdadf48b25257f34f87e2db4ede6d4b0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 816.6776
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6588267663567231878, guid: cdadf48b25257f34f87e2db4ede6d4b0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 262.09
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6588267663567231878, guid: cdadf48b25257f34f87e2db4ede6d4b0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 891.3466
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6588267663567231878, guid: cdadf48b25257f34f87e2db4ede6d4b0,
         type: 3}
