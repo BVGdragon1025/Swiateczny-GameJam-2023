@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AudioController : MonoBehaviour
 {
@@ -23,7 +24,67 @@ public class AudioController : MonoBehaviour
         }
 
         _audioSource = GetComponent<AudioSource>();
+
+
+
+#if !UNITY_EDITOR
+     DontDestroyOnLoad(gameObject);   
+#endif
     }
+
+    private void Start()
+    {
+        if (PlayerPrefs.HasKey("SfxVolume"))
+        {
+            sfxVolume = PlayerPrefs.GetFloat("SfxVolume");
+            SetSFXVolume(sfxVolume);
+        }
+        else
+        {
+            PlayerPrefs.SetFloat("SfxVolume", 1f);
+        }
+
+        if (PlayerPrefs.HasKey("MusicVolume"))
+        {
+            musicVolume = PlayerPrefs.GetFloat("MusicVolume");
+            SetMusicVolume(musicVolume);
+        }
+        else
+        {
+            PlayerPrefs.SetFloat("MusicVolume", 1f);
+        }
+
+
+    }
+
+    private void Update()
+    {
+        _audioSource.volume = musicVolume;
+    }
+
+    public void SetMusicVolume(float volume)
+    {
+        musicVolume = volume;
+        PlayerPrefs.SetFloat("MusicVolume", musicVolume);
+    }
+
+    public void SetSFXVolume(float volume)
+    {
+        sfxVolume = volume;
+        PlayerPrefs.SetFloat("SfxVolume", sfxVolume);
+        PlaySound(_audioSource.clip);
+    }
+
+    public void GetMusicVolume(Slider slider)
+    {
+        slider.value = PlayerPrefs.GetFloat("MusicVolume");
+    }
+
+    public void GetSFXVolume(Slider slider)
+    { 
+        slider.value = PlayerPrefs.GetFloat("SfxVolume");
+    }
+
 
     public void PlaySound(AudioClip audioClip, AudioSource audioSource)
     {
