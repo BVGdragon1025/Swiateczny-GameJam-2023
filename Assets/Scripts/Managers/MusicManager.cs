@@ -31,14 +31,7 @@ public class MusicManager : MonoBehaviour
     {
         int songSelection;
 
-        if(_musicList.Count == 1)
-        {
-            songSelection = 0;
-        }
-        else
-        {
-            songSelection = Random.Range(0, _musicList.Count);
-        }
+        songSelection = Random.Range(0, _musicList.Count);
 
         _controller.PlayMusic(_musicList[songSelection], _audioSource);
         Debug.Log($"Now playing: {_musicList[songSelection]}");

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
@@ -9,6 +10,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject _optionsScreen;
     [SerializeField] private GameObject _trackSelectScreen;
     [SerializeField] private GameObject _aboutScreen;
+    [SerializeField] private GameObject _loadingScreen;
     [SerializeField] private AudioClip _mainMenuMusic;
     [SerializeField] private Slider _musicSlider;
     [SerializeField] private Slider _sfxSlider;
@@ -66,6 +68,18 @@ public class MenuManager : MonoBehaviour
     public void ExitGame()
     {
         Application.Quit();
+    }
+
+    public void EasyTrack()
+    {
+        _loadingScreen.SetActive(true);
+        SceneManager.LoadSceneAsync(2);
+    }
+
+    public void HardTrack()
+    {
+        _loadingScreen.SetActive(true);
+        SceneManager.LoadSceneAsync(1);
     }
 
 }
