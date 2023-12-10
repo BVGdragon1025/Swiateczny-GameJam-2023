@@ -10537,6 +10537,11 @@ PrefabInstance:
       propertyPath: musicVolume
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4341055069866334534, guid: 310f6df0268a7624e9e6a5a7f4a1d8ec,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5246022954179109140, guid: 310f6df0268a7624e9e6a5a7f4a1d8ec,
         type: 3}
       propertyPath: m_Volume
@@ -11591,6 +11596,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 19719998}
     m_Modifications:
+    - target: {fileID: 1032109535669198536, guid: d2db0b45ed880314ea4d6da7a22664a7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032109535669198536, guid: d2db0b45ed880314ea4d6da7a22664a7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032109535669198536, guid: d2db0b45ed880314ea4d6da7a22664a7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2502488626536265112, guid: d2db0b45ed880314ea4d6da7a22664a7,
         type: 3}
       propertyPath: m_LocalPosition.x
