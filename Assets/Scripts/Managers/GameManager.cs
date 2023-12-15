@@ -22,7 +22,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _finalTime;
     [SerializeField] private TextMeshProUGUI _finalScore;
     [SerializeField] private GameObject _victoryScreen;
+    [SerializeField] private GameObject _scoreScreen;
+    [SerializeField] private GameObject _goodJobScreen;
+    [SerializeField] private GameObject _badJobScreen;
     [SerializeField] private GameObject _pauseScreen;
+    [SerializeField] private float _timeToShowResults;
     [Header("Other section")]
     [SerializeField] private Transform _lastCheckpoint;
     [SerializeField] private float _time;
@@ -166,8 +170,9 @@ public class GameManager : MonoBehaviour
         
         _giftScore.text = $"Prezenty: {_gifts} x {scoreMultiplier} = {_score}";
         _finalTime.text = $"Czas przejazdu: {finalTime}";
-        FinalScore();
         _victoryScreen.SetActive(true);
+        StartCoroutine(EndScreenTimer());
+        
 
         Debug.Log($"Your score: {_score} gifts X 10 = {_score}, Time: {finalTime}. Final score: {_finalScore}");
         
@@ -181,7 +186,6 @@ public class GameManager : MonoBehaviour
 
     private void CalculateDistance()
     {
-        //_progressBar.minValue = Vector3.Distance(_player.transform.position, _startingLine.transform.position);
         _progressBar.maxValue = Vector3.Distance(_startingLine.transform.position, _finishLine.transform.position);
         _distanceToFinish = Vector3.Distance(_finishLine.transform.position, _player.transform.position);
         _progressBar.value =  _distanceToFinish;
@@ -196,11 +200,22 @@ public class GameManager : MonoBehaviour
         if(_time <= _targetTime)
         {
             tempScore += Convert.ToInt32(_targetTime - _time) * 10;
+            _goodJobScreen.SetActive(true);
+        }
+        else
+        {
+            _badJobScreen.SetActive(true);
+            _giftScore.color = Color.white;
+            _finalTime.color = Color.white;
+            _finalScore.color = Color.white;
         }
 
         tempScore += _score;
 
-        _finalScore.text = $"Wynik koñcowy: {tempScore}";
+        _finalScore.text = $"Ostateczny wynik: {tempScore}";
+        _scoreScreen.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
 
     }
 
@@ -211,6 +226,7 @@ public class GameManager : MonoBehaviour
         Cursor.visible = true;
         _isPaused = true;
         _pauseScreen.SetActive(true);
+        
     }
 
     public void ContinueGame()
@@ -230,6 +246,12 @@ public class GameManager : MonoBehaviour
     public void ShowExitToMenu()
     {
         SceneManager.LoadScene(0);
+    }
+
+    IEnumerator EndScreenTimer()
+    {
+        yield return new WaitForSeconds(_timeToShowResults);
+        FinalScore();
     }
 
 }
