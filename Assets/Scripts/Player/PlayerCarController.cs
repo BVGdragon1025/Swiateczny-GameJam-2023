@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerCarController : MonoBehaviour
 {
@@ -37,7 +36,6 @@ public class PlayerCarController : MonoBehaviour
 
     public void FixedUpdate()
     {
-
         bool gameFinished = GameManager.Instance.GameFinished;
         bool gamePaused = GameManager.Instance.GamePaused;
         float forwardInput = Input.GetAxis("Vertical");
