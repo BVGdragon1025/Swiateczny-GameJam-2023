@@ -67,7 +67,7 @@ public class PlayerParticleController : MonoBehaviour
             }
         }
 
-        if(_wheelsOnGround == 4)
+        if(_wheelsOnGround > 0)
         {
             return true;
         }

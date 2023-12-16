@@ -62914,7 +62914,7 @@ PrefabInstance:
     - target: {fileID: 9123593147243555456, guid: 7e1594191d220ef4f8a148328490b3dd,
         type: 3}
       propertyPath: _targetTime
-      value: 300
+      value: 210
       objectReference: {fileID: 0}
     - target: {fileID: 9123593147243555456, guid: 7e1594191d220ef4f8a148328490b3dd,
         type: 3}
@@ -75937,6 +75937,16 @@ PrefabInstance:
       propertyPath: InitialModule.startLifetime.minMaxState
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4756271919803886196, guid: d14d911680d05e04ab8705ac9cf79c3b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756271919803886196, guid: d14d911680d05e04ab8705ac9cf79c3b,
+        type: 3}
+      propertyPath: _audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3fe5adac02ff1ee4181225a5d8ba48a7, type: 3}
     - target: {fileID: 5782843279082150664, guid: d14d911680d05e04ab8705ac9cf79c3b,
         type: 3}
       propertyPath: m_LocalPosition.x

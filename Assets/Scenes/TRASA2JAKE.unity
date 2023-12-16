@@ -15049,11 +15049,6 @@ PrefabInstance:
       propertyPath: InitialModule.startLifetime.minMaxState
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2359095665692880359, guid: d14d911680d05e04ab8705ac9cf79c3b,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 3fe5adac02ff1ee4181225a5d8ba48a7, type: 3}
     - target: {fileID: 5782843279082150664, guid: d14d911680d05e04ab8705ac9cf79c3b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21130,6 +21125,11 @@ PrefabInstance:
       propertyPath: _finishLine
       value: 
       objectReference: {fileID: 1280083515}
+    - target: {fileID: 9123593147243555456, guid: 7e1594191d220ef4f8a148328490b3dd,
+        type: 3}
+      propertyPath: _targetTime
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 9123593147243555456, guid: 7e1594191d220ef4f8a148328490b3dd,
         type: 3}
       propertyPath: _pauseScreen
@@ -37082,6 +37082,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sredni_Kamien
       objectReference: {fileID: 0}
+    - target: {fileID: 1005788465179587758, guid: e39a41167a75c1749b0bcb4bd8a84876,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37105,6 +37110,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TruckHelloIT
+      objectReference: {fileID: 0}
+    - target: {fileID: 3619467750484114484, guid: 7077ad53f4caaaf4c936a917d9d13597,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4139157782197053070, guid: 7077ad53f4caaaf4c936a917d9d13597,
         type: 3}

@@ -124,6 +124,20 @@ public class AudioController : MonoBehaviour
         
     }
 
+    public void PlaySound(AudioClip audioClip, AudioSource audioSource, float volumeDifference)
+    {
+        if (PlayerPrefs.HasKey("SfxVolume"))
+        {
+            sfxVolume = PlayerPrefs.GetFloat("SfxVolume");
+        }
+        else
+        {
+            sfxVolume = 1;
+        }
+
+        audioSource.PlayOneShot(audioClip, Mathf.Clamp(sfxVolume + volumeDifference, 0.15f, 1f));
+    }
+
     public void PlayMusic(AudioClip audioClip, AudioSource audioSource)
     {
         if (PlayerPrefs.HasKey("MusicVolume"))

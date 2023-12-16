@@ -5056,6 +5056,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2737925070f014439b60b94a1fb957d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _soundDifference: 0.4
   _axleInfos:
   - leftWheel: {fileID: 5947289616340817479}
     rightWheel: {fileID: 5947289614767737703}
@@ -5087,6 +5088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac3dc76ac03eddf42a131ec4a92efb24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isFlipped: 0
   _isUnfliping: 0
   _unflipTime: 3
 --- !u!82 &2359095665692880359
@@ -5101,7 +5103,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3fe5adac02ff1ee4181225a5d8ba48a7, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -5145,7 +5147,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.5
       inSlope: 0
       outSlope: 0
       tangentMode: 0

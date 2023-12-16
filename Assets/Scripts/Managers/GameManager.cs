@@ -1,9 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -199,7 +197,7 @@ public class GameManager : MonoBehaviour
 
         if(_time <= _targetTime)
         {
-            tempScore += Convert.ToInt32(_targetTime - _time) * 10;
+            tempScore += Convert.ToInt32(_targetTime - _time) * 20;
             _goodJobScreen.SetActive(true);
         }
         else
