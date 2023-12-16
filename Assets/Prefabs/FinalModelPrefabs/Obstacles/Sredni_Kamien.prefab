@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 485992845921398292}
   - component: {fileID: 3535691288232436145}
   - component: {fileID: 1654434285384979835}
-  - component: {fileID: 676693421968710391}
   - component: {fileID: 6236327172666321743}
   - component: {fileID: -6676753301803411929}
+  - component: {fileID: 4727569024101148118}
   m_Layer: 0
   m_Name: Sredni_Kamien
   m_TagString: Untagged
@@ -86,29 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &676693421968710391
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1005788465179587758}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.95
-  m_Height: 5.851918
-  m_Direction: 1
-  m_Center: {x: 0.12, y: 2.54, z: -0.03}
 --- !u!82 &6236327172666321743
 AudioSource:
   m_ObjectHideFlags: 0
@@ -219,3 +196,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioClip: {fileID: 0}
   _knockbackForce: 0.25
+--- !u!64 &4727569024101148118
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005788465179587758}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: -1
+  m_Mesh: {fileID: 5242117955540019638, guid: 58d9b124c89c9d34085f5829ee2fa668, type: 3}

@@ -11,6 +11,8 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject _trackSelectScreen;
     [SerializeField] private GameObject _aboutScreen;
     [SerializeField] private GameObject _loadingScreen;
+    [SerializeField] private Slider _loadingSlider;
+    [SerializeField] private GameObject _pressToContinuePrompt;
     [SerializeField] private AudioClip _mainMenuMusic;
     [SerializeField] private Slider _musicSlider;
     [SerializeField] private Slider _sfxSlider;
@@ -73,13 +75,43 @@ public class MenuManager : MonoBehaviour
     public void EasyTrack()
     {
         _loadingScreen.SetActive(true);
-        SceneManager.LoadSceneAsync(2);
+        //SceneManager.LoadSceneAsync(2);
+        StartCoroutine(ShowKeyToContinue(2));
     }
 
     public void HardTrack()
     {
         _loadingScreen.SetActive(true);
-        SceneManager.LoadSceneAsync(1);
+        //SceneManager.LoadSceneAsync(1);
+        StartCoroutine(ShowKeyToContinue(1));
+    }
+
+    IEnumerator ShowKeyToContinue(int sceneIntOrder)
+    {
+        yield return null;
+
+        _loadingSlider.gameObject.SetActive(true);
+        AsyncOperation asyncSceneLoad = SceneManager.LoadSceneAsync(sceneIntOrder);
+        asyncSceneLoad.allowSceneActivation = false;
+
+        while(!asyncSceneLoad.isDone)
+        {
+            _loadingSlider.value = Mathf.Clamp01(asyncSceneLoad.progress);
+            Debug.Log($"Progress: {asyncSceneLoad.progress * 100}%");
+
+            if(asyncSceneLoad.progress >= 0.9f)
+            {
+                _loadingSlider.gameObject.SetActive(false);
+                _pressToContinuePrompt.SetActive(true);
+
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    asyncSceneLoad.allowSceneActivation = true;
+                }
+            }
+
+            yield return null;
+        }
     }
 
 }

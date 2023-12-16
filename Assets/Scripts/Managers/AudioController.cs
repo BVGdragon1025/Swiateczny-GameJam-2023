@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class AudioController : MonoBehaviour
 {
     private AudioSource _audioSource;
+    [SerializeField] private AudioSource _sfxSource;
 
     public float musicVolume;
     public float sfxVolume;
@@ -55,6 +56,11 @@ public class AudioController : MonoBehaviour
     private void Update()
     {
         _audioSource.volume = musicVolume;
+
+        if (_sfxSource != null)
+        {
+            _sfxSource.volume = sfxVolume;
+        }
     }
 
     public void SetMusicVolume(float volume)
@@ -67,7 +73,7 @@ public class AudioController : MonoBehaviour
     {
         sfxVolume = volume;
         PlayerPrefs.SetFloat("SfxVolume", sfxVolume);
-        PlaySound(_audioSource.clip);
+        //PlaySound(_audioSource.clip);
     }
 
     public void GetMusicVolume(Slider slider)
@@ -106,7 +112,16 @@ public class AudioController : MonoBehaviour
             sfxVolume = 1;
         }
 
-        _audioSource.PlayOneShot(audioClip, sfxVolume);
+        if(_sfxSource != null)
+        {
+            _sfxSource.PlayOneShot(audioClip, sfxVolume);
+        }
+        else
+        {
+            _audioSource.PlayOneShot(audioClip, sfxVolume);
+        }
+
+        
     }
 
     public void PlayMusic(AudioClip audioClip, AudioSource audioSource)

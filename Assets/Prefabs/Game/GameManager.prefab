@@ -47,12 +47,18 @@ MonoBehaviour:
   _gifts: 0
   _score: 0
   _scoreDeduction: 5
+  killedSnowmans: 0
   _scoreText: {fileID: 0}
+  _deadSnowmanText: {fileID: 0}
   _giftScore: {fileID: 0}
   _finalTime: {fileID: 0}
   _finalScore: {fileID: 0}
   _victoryScreen: {fileID: 0}
+  _scoreScreen: {fileID: 0}
+  _goodJobScreen: {fileID: 0}
+  _badJobScreen: {fileID: 0}
   _pauseScreen: {fileID: 0}
+  _timeToShowResults: 3
   _lastCheckpoint: {fileID: 0}
   _time: 0
   _targetTime: 60

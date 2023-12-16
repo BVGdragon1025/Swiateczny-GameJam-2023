@@ -27,7 +27,6 @@ public class ObstacleSoft : Obstacle
         _collider.enabled = false;
         _renderer.enabled = false;
         _particles.SetActive(true);
-        //collision.rigidbody.AddForce(-collision.transform.forward * (collision.rigidbody.velocity.magnitude / _slowdownMultiplier));
         
     }
 }

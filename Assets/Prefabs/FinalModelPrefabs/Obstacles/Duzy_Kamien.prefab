@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 5778709743986513551}
   - component: {fileID: 7466337545293961514}
   - component: {fileID: 4645803011727715808}
-  - component: {fileID: 448551803521028917}
   - component: {fileID: -5293788164795159475}
   - component: {fileID: -3572408810837512305}
+  - component: {fileID: 3944301206767136833}
   m_Layer: 0
   m_Name: Duzy_Kamien
   m_TagString: Untagged
@@ -86,29 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &448551803521028917
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6591520848037268533}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.52
-  m_Height: 8.23
-  m_Direction: 1
-  m_Center: {x: 0.25, y: 3.33, z: -0.09}
 --- !u!82 &-5293788164795159475
 AudioSource:
   m_ObjectHideFlags: 0
@@ -219,3 +196,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioClip: {fileID: 0}
   _knockbackForce: 0.3
+--- !u!64 &3944301206767136833
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6591520848037268533}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8459247992205349867, guid: 68fef0f40efe0c145b74f0eb7eb81155, type: 3}
