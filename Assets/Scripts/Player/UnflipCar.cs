@@ -28,7 +28,7 @@ public class UnflipCar : MonoBehaviour
 
         if (transform.up.normalized.y < 0.8f && _rb.velocity.magnitude < 2.0f)
         {
-            transform.SetPositionAndRotation(transform.position, Quaternion.Euler(transform.rotation.x, transform.rotation.y, 0f));
+            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 0f);
 
             Debug.Log($"Car flipped! Up Y Rotation: {transform.up.normalized.y}");
         }

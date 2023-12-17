@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
     public int ScoreDeduction {  get { return _scoreDeduction; }}
     public bool GameFinished { get { return _gameFinished; }}
     public bool GamePaused { get { return _isPaused; }}
-    public float DistanceLeft { get { return _distanceToFinish; }}
+    public float DistanceLeft { get { return _distanceToFinish; } set { _distanceToFinish = value; } }
     public static GameManager Instance;
 
 
@@ -186,8 +186,28 @@ public class GameManager : MonoBehaviour
     {
         _progressBar.maxValue = Vector3.Distance(_startingLine.transform.position, _finishLine.transform.position);
         _distanceToFinish = Vector3.Distance(_finishLine.transform.position, _player.transform.position);
-        _progressBar.value =  _distanceToFinish;
+        _progressBar.value = _distanceToFinish;
         Debug.Log(_progressBar.value);
+
+        /*
+        if(SceneManager.GetActiveScene().name == "TRASA2JAKE")
+        {
+            _progressBar.maxValue = Vector3.Distance(_startingLine.transform.position, _finishLine.transform.position);
+            _distanceToFinish = Vector3.Distance(_finishLine.transform.position, _player.transform.position);
+            _progressBar.value = _distanceToFinish;
+            Debug.Log(_progressBar.value);
+        }
+        else
+        {
+            //_progressBar.maxValue = Vector3.Distance(_startingLine.transform.position, _finishLine.transform.position);
+            //float totalDistance = _startingLine.transform.position.magnitude + _distanceToFinish + _finishLine.transform.position.magnitude;
+            _progressBar.maxValue = _distanceToFinish;
+            //_distanceToFinish = Vector3.Distance(_finishLine.transform.position, _player.transform.position);
+            _progressBar.value = _distanceToFinish - ((_startingLine.transform.position.magnitude + _finishLine.transform.position.magnitude) / _player.transform.position.magnitude);
+            Debug.Log($"Value:{_progressBar.value}, Distance:{_distanceToFinish}, P:{_player.transform.position.magnitude}, S:{_startingLine.transform.position.magnitude}, F:{_finishLine.transform.position.magnitude}");
+        }
+
+        */
 
     }
 

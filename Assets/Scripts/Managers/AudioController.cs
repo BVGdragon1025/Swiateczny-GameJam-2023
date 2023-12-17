@@ -166,4 +166,14 @@ public class AudioController : MonoBehaviour
         _audioSource.PlayOneShot(audioClip, musicVolume);
     }
 
+    public void PauseAudioSource(AudioSource audioSource)
+    {
+        audioSource.Pause();
+    }
+
+    public void PlayAudioSource(AudioSource audioSource)
+    {
+        audioSource.Play();
+    }
+
 }
