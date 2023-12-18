@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerCarController : MonoBehaviour
 {
+    [SerializeField] private float _soundDifference;
     [SerializeField] private List<AxleInfo> _axleInfos; // the information about each individual axle
     [SerializeField] private float _maxMotorTorque; // maximum torque the motor can apply to wheel
     [SerializeField] private float _maxBrakingTorque; // maximum torque the motor can apply to wheel
@@ -16,10 +17,18 @@ public class PlayerCarController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _speedText;
  
     private Rigidbody _rb;
+    private AudioSource _audioSource;
+
+    private void Awake()
+    {
+        _rb = GetComponent<Rigidbody>();
+        _audioSource = GetComponent<AudioSource>();
+    }
 
     private void Start()
     {
-        _rb = GetComponent<Rigidbody>();
+        _audioSource.volume = Mathf.Clamp(AudioController.Instance.sfxVolume - _soundDifference, 0.15f, 1.0f);
+
     }
 
     private void Update()

@@ -1,11 +1,9 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CheckpointController : MonoBehaviour
 {
-    [SerializeField] private Vector3 checkpointTransform;
     [SerializeField] private Quaternion _carDefaultRotation;
     [SerializeField] private bool _isCrossed;
     private enum CheckpointTypes { Start, Checkpoint, Finish }
@@ -15,7 +13,6 @@ public class CheckpointController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        checkpointTransform = transform.position;
         _isCrossed = false;
     }
 
