@@ -12,9 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Starting screen.unity
     guid: d3a1ed287c5d6b74782f4c984fd455e6
   - enabled: 1
-    path: Assets/Scenes/trasa 1.unity
+    path: Assets/Scenes/HardTrack.unity
     guid: 4cf6246296d31464aaa2704956681a3e
   - enabled: 1
-    path: Assets/Scenes/TRASA2JAKE.unity
+    path: Assets/Scenes/EasyTrack.unity
     guid: 3e78967bb4e24594aa51a6435b51108b
   m_configObjects: {}

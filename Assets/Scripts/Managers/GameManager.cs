@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     [Header("UI Section")]
     [SerializeField] private TextMeshProUGUI _scoreText;
     [SerializeField] private TextMeshProUGUI _deadSnowmanText;
+    [SerializeField] private TextMeshProUGUI _currentTime;
+    [SerializeField] private TextMeshProUGUI _bonusTime;
     [SerializeField] private TextMeshProUGUI _giftScore;
     [SerializeField] private TextMeshProUGUI _finalTime;
     [SerializeField] private TextMeshProUGUI _finalScore;
@@ -71,6 +73,7 @@ public class GameManager : MonoBehaviour
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        ShowBonusTime();
 
     }
 
@@ -129,8 +132,8 @@ public class GameManager : MonoBehaviour
         Rigidbody rb = objectToRespawn.GetComponent<Rigidbody>();
         CheckpointController cc = _lastCheckpoint.gameObject.GetComponent<CheckpointController>();
 
-        objectToRespawn.transform.position = _lastCheckpoint.transform.position;
-        objectToRespawn.transform.rotation = cc.CarRotation;
+        objectToRespawn.transform.SetPositionAndRotation(new Vector3(_lastCheckpoint.transform.position.x, _lastCheckpoint.transform.position.y + 0.5f, _lastCheckpoint.transform.position.z), Quaternion.Euler(0, Mathf.Abs(cc.transform.rotation.eulerAngles.y) + 90.0f, 0));
+        Debug.Log("rotation: " + objectToRespawn.transform.rotation + " checkpoint rotation: " + cc.transform.rotation.eulerAngles);
         rb.velocity = Vector3.zero;
     }
 
@@ -179,6 +182,13 @@ public class GameManager : MonoBehaviour
     private void CountTime()
     {
         _time += Time.deltaTime;
+
+        float timeInMinutes = Mathf.FloorToInt(_time / 60);
+        float timeInSeconds = Mathf.FloorToInt(_time % 60);
+        float timeInMiliseconds = (_time % 1) * 1000;
+
+        _currentTime.text = string.Format("{0:00}:{1:00}:{2:000}", timeInMinutes, timeInSeconds, timeInMiliseconds);
+
         Debug.Log($"Time: {_time}");
     }
 
@@ -232,9 +242,26 @@ public class GameManager : MonoBehaviour
 
         _finalScore.text = $"Ostateczny wynik: {tempScore}";
         _scoreScreen.SetActive(true);
+
+#if UNITY_EDITOR
+        ScreenCapture.CaptureScreenshot($"{Application.persistentDataPath}/[DEV]{SceneManager.GetActiveScene().name} {DateTime.Now.ToLocalTime():dd-MM-yyyy (HH-mm-ss)}.png");
+#else
+        ScreenCapture.CaptureScreenshot($"{Application.persistentDataPath}/{SceneManager.GetActiveScene().name} {DateTime.Now.ToLocalTime():dd-MM-yyyy (HH-mm-ss)}.png");
+#endif
+
+        //Debug.Log($"{Application.persistentDataPath}/{SceneManager.GetActiveScene().name} {DateTime.Now.ToLocalTime():dd-MM-yyyy (HH-mm-ss)}.png");
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
+    }
+
+    private void ShowBonusTime()
+    {
+        float timeInMinutes = Mathf.FloorToInt(_targetTime / 60);
+        float timeInSeconds = Mathf.FloorToInt(_targetTime % 60);
+        float timeInMiliseconds = (_targetTime % 1) * 1000;
+
+        _bonusTime.text = $"Bonus: {string.Format("{0:00}:{1:00}:{2:000}", timeInMinutes, timeInSeconds, timeInMiliseconds)} ";
     }
 
     private void PauseMenu()

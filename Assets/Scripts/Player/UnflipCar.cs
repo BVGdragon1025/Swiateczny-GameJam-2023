@@ -24,13 +24,14 @@ public class UnflipCar : MonoBehaviour
 
     void CheckIfCarFlipped()
     {
-        Debug.Log($"Up Y Rotation: {transform.up.normalized.y}");
+        //Debug.Log($"Up Y Rotation: {transform.up.normalized.y}");
 
         if (transform.up.normalized.y < 0.8f && _rb.velocity.magnitude < 2.0f)
         {
-            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 0f);
 
-            Debug.Log($"Car flipped! Up Y Rotation: {transform.up.normalized.y}");
+            transform.rotation = Quaternion.Euler(transform.rotation.x, Camera.main.transform.rotation.eulerAngles.y, 0f);
+
+            //Debug.Log($"Car flipped! Up Y Rotation: {transform.up.normalized.y}");
         }
 
     }
