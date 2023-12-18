@@ -4005,6 +4005,64 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &186980295 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5625920619824682231, guid: 287942068bef3de4d999e3df375b87af,
+    type: 3}
+  m_PrefabInstance: {fileID: 296325111}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &186980296 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3600590724972426940, guid: 287942068bef3de4d999e3df375b87af,
+    type: 3}
+  m_PrefabInstance: {fileID: 296325111}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186980295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &186980297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186980295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:d4ab7d267647d2b48ae3923729b12cc3
+    m_TableEntryReference:
+      m_KeyId: 21221335040
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 186980296}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &188459725
 GameObject:
   m_ObjectHideFlags: 0
@@ -7398,7 +7456,7 @@ PrefabInstance:
     - target: {fileID: 3143105958794494509, guid: 287942068bef3de4d999e3df375b87af,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -136
+      value: -279
       objectReference: {fileID: 0}
     - target: {fileID: 3413104033398170476, guid: 287942068bef3de4d999e3df375b87af,
         type: 3}
@@ -7425,10 +7483,20 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3565028275697131168, guid: 287942068bef3de4d999e3df375b87af,
+        type: 3}
+      propertyPath: managedReferences[5348539553553317930].m_Value
+      value: 
+      objectReference: {fileID: 1637603533}
+    - target: {fileID: 3781061812830428190, guid: 287942068bef3de4d999e3df375b87af,
+        type: 3}
+      propertyPath: managedReferences[5348539553553317932].m_Value
+      value: 
+      objectReference: {fileID: 1637603533}
     - target: {fileID: 3919376615237796279, guid: 287942068bef3de4d999e3df375b87af,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -145
+      value: -178
       objectReference: {fileID: 0}
     - target: {fileID: 5039195022371169880, guid: 287942068bef3de4d999e3df375b87af,
         type: 3}
@@ -7443,7 +7511,7 @@ PrefabInstance:
     - target: {fileID: 5107148552128154426, guid: 287942068bef3de4d999e3df375b87af,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -145
+      value: -178.0001
       objectReference: {fileID: 0}
     - target: {fileID: 5154933833823972723, guid: 287942068bef3de4d999e3df375b87af,
         type: 3}
@@ -7460,6 +7528,11 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6380918284523365348, guid: 287942068bef3de4d999e3df375b87af,
+        type: 3}
+      propertyPath: managedReferences[5348539553553317922].m_Value
+      value: 
+      objectReference: {fileID: 1637603533}
     - target: {fileID: 7069989039404050402, guid: 287942068bef3de4d999e3df375b87af,
         type: 3}
       propertyPath: _audioSource
@@ -7513,7 +7586,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5625920619824682231, guid: 287942068bef3de4d999e3df375b87af,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 186980297}
   m_SourcePrefab: {fileID: 100100000, guid: 287942068bef3de4d999e3df375b87af, type: 3}
 --- !u!114 &296325112 stripped
 MonoBehaviour:

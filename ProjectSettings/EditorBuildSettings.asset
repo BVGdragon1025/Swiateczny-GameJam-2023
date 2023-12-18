@@ -17,4 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EasyTrack.unity
     guid: 3e78967bb4e24594aa51a6435b51108b
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: ab2fd10748ba07f4ab6be30f9a39db5b,
+      type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: ced71449c35e7e0419e5cd453d867357,
+      type: 2}

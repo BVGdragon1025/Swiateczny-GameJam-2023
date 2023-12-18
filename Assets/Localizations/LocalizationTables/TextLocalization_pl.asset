@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: TextLocalization_pl
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: pl
+  m_SharedData: {fileID: 11400000, guid: d4ab7d267647d2b48ae3923729b12cc3, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 5348539553553317915
+  m_TableData:
+  - m_Id: 21221335040
+    m_Localized: Prosta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 399186845696
+    m_Localized: Normalna
+    m_Metadata:
+      m_Items: []
+  - m_Id: 432992935936
+    m_Localized: Trudna
+    m_Metadata:
+      m_Items: []
+  - m_Id: 490790445056
+    m_Localized: 'Czas: {GameManager.CurrentTime}'
+    m_Metadata:
+      m_Items:
+      - rid: 5348539553553317915
+  - m_Id: 911202312192
+    m_Localized: 'Prezenty: {GameManager.TotalGifts} x 10 = {GameManager.Score}'
+    m_Metadata:
+      m_Items:
+      - rid: 5348539553553317915
+  - m_Id: 1274139631616
+    m_Localized: 'Ostateczny wynik: {GameManager.TotalScore}'
+    m_Metadata:
+      m_Items:
+      - rid: 5348539553553317915
+  - m_Id: 1444562591744
+    m_Localized: KONIEC TRASY!
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 5348539553553317915
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00e063457200000000e0e327d400000000e0a3a828010000
