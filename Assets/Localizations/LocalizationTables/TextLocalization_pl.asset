@@ -32,7 +32,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 490790445056
-    m_Localized: 'Czas: {GameManager.CurrentTime}'
+    m_Localized: 'Czas przejazdu: {GameManager.CurrentTime}'
     m_Metadata:
       m_Items:
       - rid: 5348539553553317915
