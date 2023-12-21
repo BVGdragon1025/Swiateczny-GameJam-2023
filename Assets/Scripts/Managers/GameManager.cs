@@ -12,7 +12,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int _gifts;
     [SerializeField] private int _score;
     [SerializeField] private int _scoreDeduction;
-    [SerializeField] public int killedSnowmans;
+    public int killedSnowmans;
+    private int _totalScore;
     [Header("UI Section")]
     [SerializeField] private TextMeshProUGUI _scoreText;
     [SerializeField] private TextMeshProUGUI _deadSnowmanText;
@@ -30,6 +31,7 @@ public class GameManager : MonoBehaviour
     [Header("Other section")]
     [SerializeField] private Transform _lastCheckpoint;
     [SerializeField] private float _time;
+    private string _totalTime;
     [SerializeField] private float _targetTime;
     [SerializeField] private bool _gameFinished;
     [SerializeField] private bool _isPaused;
@@ -45,6 +47,9 @@ public class GameManager : MonoBehaviour
 
     //Public variables
     public int Score { get { return _score; }}
+    public int TotalScore { get { return _totalScore; }}
+    public string CurrentTime { get { return _currentTime.text; }}
+    public float TotalGifts { get { return _gifts; }}
     public int ScoreDeduction {  get { return _scoreDeduction; }}
     public bool GameFinished { get { return _gameFinished; }}
     public bool GamePaused { get { return _isPaused; }}
@@ -241,6 +246,7 @@ public class GameManager : MonoBehaviour
         tempScore += _score;
 
         _finalScore.text = $"Ostateczny wynik: {tempScore}";
+        _totalScore = tempScore;
         _scoreScreen.SetActive(true);
 
 #if UNITY_EDITOR

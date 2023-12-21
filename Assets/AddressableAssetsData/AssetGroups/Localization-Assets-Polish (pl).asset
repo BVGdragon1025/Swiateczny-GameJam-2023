@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Assets-Polish (pl)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-Assets-Polish (pl)
+  m_Data:
+    m_SerializedData: []
+  m_GUID: eabcbb75183819548a23dcd597917d6c
+  m_SerializeEntries:
+  - m_GUID: b29531d039dce0f4bb5fbdefc2cd9402
+    m_Address: Na_pewno_wyjsc_z_gry
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pl
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e65b42c5cba041c4189c04306ff24436
+    m_Address: NIE
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pl
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3e7ed970d5b16394b854955f190114b7
+    m_Address: TAK
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pl
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e88fbf4b824541c4d91001c80f53e959
+    m_Address: Tworcy
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pl
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8da6eaaec5fbe3b4393961947b5e2b6e
+    m_Address: Wybor_trasy_panel
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pl
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 88f26c0d0d7abdd44b96ce6cb3cc73ea
+    m_Address: Wyjscie
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pl
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 676709bd47cc45240818fefd95edc2e8
+    m_Address: Start
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pl
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0ba37ad8eae1dcb478cd14d8c01f1fc9
+    m_Address: zacznij
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pl
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 412cf8af1636e5146818aa5f4d08714e
+    m_Address: HUD_tutorial_1
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pl
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7a46169938cb1eb43b890deef9c1b601
+    m_Address: HUD_tutorial_2
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pl
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b214bc524dd330149bbc5bcfaf0e05aa
+    m_Address: Restart
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pl
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fda2505a76ecd734dab52cdd21118efd
+    m_Address: Kontynuuj
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pl
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b0460a5c543969c46a4bb119862d9bcc
+    m_Address: Pauza
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pl
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9d968202336399848947ca5f9877b4ae
+    m_Address: Credits_napisy-2
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pl
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 627761ca29bb7794ab279ef84632d273
+    m_Address: Ustawienia_panel
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pl
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e1be641c8c74d174e857ed6a70a87f16
+    m_Address: Wyjdz
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pl
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 974cc5c96db7a794aa585fc27a4110b5
+    m_Address: opcje
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-pl
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 7e435482895e7344996e80adc7bc8dde, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 81a21f9b108af524e90ce5f9cca4be5a, type: 2}
+    - {fileID: 11400000, guid: 23320e67a67d0ea4c8713bb1daed1bb4, type: 2}

@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: TextLocalization Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: TextLocalization
+  m_TableCollectionNameGuidString: d4ab7d267647d2b48ae3923729b12cc3
+  m_Entries:
+  - m_Id: 21221335040
+    m_Key: EasyTrack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 399186845696
+    m_Key: NormalTrack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 432992935936
+    m_Key: HardTrack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 490790445056
+    m_Key: Time
+    m_Metadata:
+      m_Items: []
+  - m_Id: 911202312192
+    m_Key: Score
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1274139631616
+    m_Key: FinalScore
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1444562591744
+    m_Key: WinningText
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 5348539553553317913
+  references:
+    version: 2
+    RefIds:
+    - rid: 5348539553553317913
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1702922836830

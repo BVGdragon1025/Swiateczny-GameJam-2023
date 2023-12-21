@@ -7380,6 +7380,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2823249383197025561, guid: 287942068bef3de4d999e3df375b87af,
+        type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 21221335040
+      objectReference: {fileID: 0}
     - target: {fileID: 2842933636107751777, guid: 287942068bef3de4d999e3df375b87af,
         type: 3}
       propertyPath: _audioSource
@@ -7398,7 +7403,7 @@ PrefabInstance:
     - target: {fileID: 3143105958794494509, guid: 287942068bef3de4d999e3df375b87af,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -136
+      value: -279
       objectReference: {fileID: 0}
     - target: {fileID: 3413104033398170476, guid: 287942068bef3de4d999e3df375b87af,
         type: 3}
@@ -7425,10 +7430,20 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3565028275697131168, guid: 287942068bef3de4d999e3df375b87af,
+        type: 3}
+      propertyPath: managedReferences[5348539553553317930].m_Value
+      value: 
+      objectReference: {fileID: 1637603533}
+    - target: {fileID: 3781061812830428190, guid: 287942068bef3de4d999e3df375b87af,
+        type: 3}
+      propertyPath: managedReferences[5348539553553317932].m_Value
+      value: 
+      objectReference: {fileID: 1637603533}
     - target: {fileID: 3919376615237796279, guid: 287942068bef3de4d999e3df375b87af,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -145
+      value: -178
       objectReference: {fileID: 0}
     - target: {fileID: 5039195022371169880, guid: 287942068bef3de4d999e3df375b87af,
         type: 3}
@@ -7443,7 +7458,7 @@ PrefabInstance:
     - target: {fileID: 5107148552128154426, guid: 287942068bef3de4d999e3df375b87af,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -145
+      value: -178.0001
       objectReference: {fileID: 0}
     - target: {fileID: 5154933833823972723, guid: 287942068bef3de4d999e3df375b87af,
         type: 3}
@@ -7460,6 +7475,11 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6380918284523365348, guid: 287942068bef3de4d999e3df375b87af,
+        type: 3}
+      propertyPath: managedReferences[5348539553553317922].m_Value
+      value: 
+      objectReference: {fileID: 1637603533}
     - target: {fileID: 7069989039404050402, guid: 287942068bef3de4d999e3df375b87af,
         type: 3}
       propertyPath: _audioSource

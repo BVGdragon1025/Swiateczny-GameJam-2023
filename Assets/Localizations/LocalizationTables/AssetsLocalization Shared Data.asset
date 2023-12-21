@@ -1,0 +1,157 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: AssetsLocalization Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: AssetsLocalization
+  m_TableCollectionNameGuidString: 5d1ba3ec80999624193b155d6270d4cf
+  m_Entries:
+  - m_Id: 21930172416
+    m_Key: RestartButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 59888623616
+    m_Key: ExitButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77991239680
+    m_Key: StartButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 103798792192
+    m_Key: TrackSelectScreen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 159415263232
+    m_Key: ExitScreen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 207498764288
+    m_Key: ExitYesButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 226058559488
+    m_Key: ExitNoButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 261965996032
+    m_Key: CreatorsButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 377753952256
+    m_Key: TutorialOne
+    m_Metadata:
+      m_Items: []
+  - m_Id: 404798824448
+    m_Key: TutorialTwo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 433009713152
+    m_Key: PressToContinueButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 841589448704
+    m_Key: ContinueButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 930055708672
+    m_Key: 'PauseScreen
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1086322892800
+    m_Key: CreditsText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1216405037056
+    m_Key: OptionsScreen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1442247335936
+    m_Key: ExitRaceButton
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1544294752256
+    m_Key: OptionsButton
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items:
+    - rid: 5348539553553317925
+  m_KeyGenerator:
+    rid: 5348539553553317924
+  references:
+    version: 2
+    RefIds:
+    - rid: 5348539553553317924
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1702925105298
+    - rid: 5348539553553317925
+      type: {class: AssetTypeMetadata, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries:
+        - m_KeyId: 159415263232
+          m_TableCodes:
+          - pl
+        - m_KeyId: 226058559488
+          m_TableCodes:
+          - pl
+        - m_KeyId: 207498764288
+          m_TableCodes:
+          - pl
+        - m_KeyId: 261965996032
+          m_TableCodes:
+          - pl
+        - m_KeyId: 103798792192
+          m_TableCodes:
+          - pl
+        - m_KeyId: 59888623616
+          m_TableCodes:
+          - pl
+        - m_KeyId: 21930172416
+          m_TableCodes:
+          - pl
+        - m_KeyId: 433009713152
+          m_TableCodes:
+          - pl
+        - m_KeyId: 377753952256
+          m_TableCodes:
+          - pl
+        - m_KeyId: 404798824448
+          m_TableCodes:
+          - pl
+        - m_KeyId: 77991239680
+          m_TableCodes:
+          - pl
+        - m_KeyId: 841589448704
+          m_TableCodes:
+          - pl
+        - m_KeyId: 930055708672
+          m_TableCodes:
+          - pl
+        - m_KeyId: 1086322892800
+          m_TableCodes:
+          - pl
+        - m_KeyId: 1216405037056
+          m_TableCodes:
+          - pl
+        - m_KeyId: 1442247335936
+          m_TableCodes:
+          - pl
+        - m_KeyId: 1544294752256
+          m_TableCodes:
+          - pl
+        m_TypeString: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null

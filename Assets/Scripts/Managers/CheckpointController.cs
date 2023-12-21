@@ -8,12 +8,21 @@ public class CheckpointController : MonoBehaviour
     [SerializeField] private bool _isCrossed;
     private enum CheckpointTypes { Start, Checkpoint, Finish }
     [SerializeField] private CheckpointTypes _type = CheckpointTypes.Start;
+    private AudioSource _audioSource;
+    [SerializeField] AudioClip _audioClip;
 
     public Quaternion CarRotation { get { return _carDefaultRotation; } }
+
+    private void Awake()
+    {
+        _audioSource = GetComponent<AudioSource>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         _isCrossed = false;
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -24,9 +33,11 @@ public class CheckpointController : MonoBehaviour
             switch (_type)
             {
                 case CheckpointTypes.Start:
-                case CheckpointTypes.Checkpoint:
-                    _carDefaultRotation = other.transform.rotation;
                     GameManager.Instance.GetLastCheckpoint(transform);
+                    break;
+                case CheckpointTypes.Checkpoint:
+                    GameManager.Instance.GetLastCheckpoint(transform);
+                    AudioController.Instance.PlaySound(_audioClip, _audioSource);
                     break;
                 case CheckpointTypes.Finish:
                     GameManager.Instance.FinishRace();
