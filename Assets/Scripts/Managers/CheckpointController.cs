@@ -37,7 +37,7 @@ public class CheckpointController : MonoBehaviour
                     break;
                 case CheckpointTypes.Checkpoint:
                     GameManager.Instance.GetLastCheckpoint(transform);
-                    AudioController.Instance.PlaySound(_audioClip, _audioSource);
+                    AudioController.Instance.PlaySound(_audioClip);
                     break;
                 case CheckpointTypes.Finish:
                     GameManager.Instance.FinishRace();

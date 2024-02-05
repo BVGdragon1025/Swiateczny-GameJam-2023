@@ -14,7 +14,7 @@ public class MusicPauser : MonoBehaviour
 
     private void OnDisable()
     {
-        if(!_audioSource.isPlaying)
+        if(_audioSource && !_audioSource.isPlaying)
             _audioSource.Play();
     }
 
