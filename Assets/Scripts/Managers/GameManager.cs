@@ -31,7 +31,6 @@ public class GameManager : MonoBehaviour
     [Header("Other section")]
     [SerializeField] private Transform _lastCheckpoint;
     [SerializeField] private float _time;
-    private string _totalTime;
     [SerializeField] private float _targetTime;
     [SerializeField] private bool _gameFinished;
     [SerializeField] private bool _isPaused;
@@ -100,12 +99,6 @@ public class GameManager : MonoBehaviour
         else if(Input.GetKeyDown(KeyCode.Escape) && _isPaused && !_gameFinished)
         {
             ContinueGame();
-        }
-        
-        if(Input.GetKeyDown(KeyCode.Escape) && _gameFinished)
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
         }
 
         if (Input.GetKeyDown(KeyCode.R))

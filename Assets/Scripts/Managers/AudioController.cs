@@ -73,7 +73,7 @@ public class AudioController : MonoBehaviour
     {
         sfxVolume = volume;
         PlayerPrefs.SetFloat("SfxVolume", sfxVolume);
-        //PlaySound(_audioSource.clip);
+        
     }
 
     public void GetMusicVolume(Slider slider)
