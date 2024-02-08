@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Snowman
   - Point
+  - LocalisationObject
   layers:
   - Default
   - TransparentFX
