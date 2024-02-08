@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -242,8 +243,26 @@ public class GameManager : MonoBehaviour
         _totalScore = tempScore;
         _scoreScreen.SetActive(true);
 
-#if UNITY_EDITOR
-        ScreenCapture.CaptureScreenshot($"{Application.persistentDataPath}/[DEV]{SceneManager.GetActiveScene().name} {DateTime.Now.ToLocalTime():dd-MM-yyyy (HH-mm-ss)}.png");
+#if UNITY_EDITOR_WIN
+        if (Directory.Exists($"{Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)}/My Games/Rushund/Dev"))
+        {
+            ScreenCapture.CaptureScreenshot($"{Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)}/My Games/Rushund/Dev/[DEV]{SceneManager.GetActiveScene().name} {DateTime.Now.ToLocalTime():dd-MM-yyyy (HH-mm-ss)}.png");
+        }
+        else
+        {
+            Directory.CreateDirectory($"{Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)}/My Games/Rushund/Dev");
+            ScreenCapture.CaptureScreenshot($"{Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)}/My Games/Rushund/Dev/[DEV]{SceneManager.GetActiveScene().name} {DateTime.Now.ToLocalTime():dd-MM-yyyy (HH-mm-ss)}.png");
+        }
+#elif UNITY_STANDALONE_WIN
+        if (Directory.Exists($"{Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)}/My Games/Rushund"))
+        {
+            ScreenCapture.CaptureScreenshot($"{Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)}/My Games/Rushund/{SceneManager.GetActiveScene().name} {DateTime.Now.ToLocalTime():dd-MM-yyyy (HH-mm-ss)}.png");
+        }
+        else
+        {
+            Directory.CreateDirectory($"{Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)}/My Games/Rushund");
+            ScreenCapture.CaptureScreenshot($"{Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)}/My Games/Rushund/{SceneManager.GetActiveScene().name} {DateTime.Now.ToLocalTime():dd-MM-yyyy (HH-mm-ss)}.png");
+        }
 #else
         ScreenCapture.CaptureScreenshot($"{Application.persistentDataPath}/{SceneManager.GetActiveScene().name} {DateTime.Now.ToLocalTime():dd-MM-yyyy (HH-mm-ss)}.png");
 #endif
