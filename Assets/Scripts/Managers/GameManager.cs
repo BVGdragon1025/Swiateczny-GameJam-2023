@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -28,6 +29,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject _badJobScreen;
     [SerializeField] private GameObject _pauseScreen;
     [SerializeField] private float _timeToShowResults;
+    [SerializeField] private GameObject _localisationObject;
     [Header("Other section")]
     [SerializeField] private Transform _lastCheckpoint;
     [SerializeField] private float _time;
@@ -166,9 +168,12 @@ public class GameManager : MonoBehaviour
             scoreMultiplier = (_score / _gifts).ToString();
         }
 
+        if (!_localisationObject)
+        {
+            _giftScore.text = $"Prezenty: {_gifts} x {scoreMultiplier} = {_score}";
+            _finalTime.text = $"Czas przejazdu: {finalTime}";
+        }
         
-        _giftScore.text = $"Prezenty: {_gifts} x {scoreMultiplier} = {_score}";
-        _finalTime.text = $"Czas przejazdu: {finalTime}";
         _victoryScreen.SetActive(true);
         StartCoroutine(EndScreenTimer());
         
@@ -197,26 +202,6 @@ public class GameManager : MonoBehaviour
         _progressBar.value = _distanceToFinish;
         Debug.Log(_progressBar.value);
 
-        /*
-        if(SceneManager.GetActiveScene().name == "TRASA2JAKE")
-        {
-            _progressBar.maxValue = Vector3.Distance(_startingLine.transform.position, _finishLine.transform.position);
-            _distanceToFinish = Vector3.Distance(_finishLine.transform.position, _player.transform.position);
-            _progressBar.value = _distanceToFinish;
-            Debug.Log(_progressBar.value);
-        }
-        else
-        {
-            //_progressBar.maxValue = Vector3.Distance(_startingLine.transform.position, _finishLine.transform.position);
-            //float totalDistance = _startingLine.transform.position.magnitude + _distanceToFinish + _finishLine.transform.position.magnitude;
-            _progressBar.maxValue = _distanceToFinish;
-            //_distanceToFinish = Vector3.Distance(_finishLine.transform.position, _player.transform.position);
-            _progressBar.value = _distanceToFinish - ((_startingLine.transform.position.magnitude + _finishLine.transform.position.magnitude) / _player.transform.position.magnitude);
-            Debug.Log($"Value:{_progressBar.value}, Distance:{_distanceToFinish}, P:{_player.transform.position.magnitude}, S:{_startingLine.transform.position.magnitude}, F:{_finishLine.transform.position.magnitude}");
-        }
-
-        */
-
     }
 
     private void FinalScore()
@@ -238,12 +223,35 @@ public class GameManager : MonoBehaviour
 
         tempScore += _score;
 
-        _finalScore.text = $"Ostateczny wynik: {tempScore}";
+        if (!_localisationObject)
+        {
+            _finalScore.text = $"Ostateczny wynik: {tempScore}";
+        }
+
         _totalScore = tempScore;
+        _localisationObject.SetActive(true);
         _scoreScreen.SetActive(true);
 
-#if UNITY_EDITOR
-        ScreenCapture.CaptureScreenshot($"{Application.persistentDataPath}/[DEV]{SceneManager.GetActiveScene().name} {DateTime.Now.ToLocalTime():dd-MM-yyyy (HH-mm-ss)}.png");
+#if UNITY_EDITOR_WIN
+        if (Directory.Exists($"{Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)}/My Games/Rushund/Dev"))
+        {
+            ScreenCapture.CaptureScreenshot($"{Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)}/My Games/Rushund/Dev/[DEV]{SceneManager.GetActiveScene().name} {DateTime.Now.ToLocalTime():dd-MM-yyyy (HH-mm-ss)}.png");
+        }
+        else
+        {
+            Directory.CreateDirectory($"{Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)}/My Games/Rushund/Dev");
+            ScreenCapture.CaptureScreenshot($"{Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)}/My Games/Rushund/Dev/[DEV]{SceneManager.GetActiveScene().name} {DateTime.Now.ToLocalTime():dd-MM-yyyy (HH-mm-ss)}.png");
+        }
+#elif UNITY_STANDALONE_WIN
+        if (Directory.Exists($"{Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)}/My Games/Rushund"))
+        {
+            ScreenCapture.CaptureScreenshot($"{Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)}/My Games/Rushund/{SceneManager.GetActiveScene().name} {DateTime.Now.ToLocalTime():dd-MM-yyyy (HH-mm-ss)}.png");
+        }
+        else
+        {
+            Directory.CreateDirectory($"{Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)}/My Games/Rushund");
+            ScreenCapture.CaptureScreenshot($"{Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)}/My Games/Rushund/{SceneManager.GetActiveScene().name} {DateTime.Now.ToLocalTime():dd-MM-yyyy (HH-mm-ss)}.png");
+        }
 #else
         ScreenCapture.CaptureScreenshot($"{Application.persistentDataPath}/{SceneManager.GetActiveScene().name} {DateTime.Now.ToLocalTime():dd-MM-yyyy (HH-mm-ss)}.png");
 #endif

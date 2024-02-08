@@ -47,7 +47,7 @@ MonoBehaviour:
       m_Items:
       - rid: 5348539553553317914
   - m_Id: 1444562591744
-    m_Localized: RACE OVER!
+    m_Localized: RACE FINISHED!
     m_Metadata:
       m_Items: []
   references:
