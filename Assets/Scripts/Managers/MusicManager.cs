@@ -10,11 +10,17 @@ public class MusicManager : MonoBehaviour
     private AudioController _controller;
     private AudioSource _audioSource;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         _controller = GetComponent<AudioController>();
         _audioSource = GetComponent<AudioSource>();
+
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        ChooseRandomSong();
     }
 
     // Update is called once per frame
@@ -29,12 +35,15 @@ public class MusicManager : MonoBehaviour
 
     void ChooseRandomSong()
     {
-        int songSelection;
+        //int songSelection = 0;
+        //Debug.Log($"Now rolled: {songSelection}");
+        var songSelection = new System.Random();
+        int randomVar = songSelection.Next(0, _musicList.Count);
+        
+        Debug.Log($"Now rolled: {randomVar}");
 
-        songSelection = Random.Range(0, _musicList.Count);
-
-        _controller.PlayMusic(_musicList[songSelection], _audioSource);
-        Debug.Log($"Now playing: {_musicList[songSelection]}");
+        _controller.PlayMusic(_musicList[randomVar], _audioSource);
+        Debug.Log($"Now playing: {_musicList[randomVar].name}, Amount of songs: {_musicList.Count}, Random number: {randomVar}");
 
     }
 
