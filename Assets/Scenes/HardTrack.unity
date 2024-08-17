@@ -5,8 +5,8 @@ OcclusionCullingSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_OcclusionBakeSettings:
-    smallestOccluder: 5
-    smallestHole: 0.25
+    smallestOccluder: 6
+    smallestHole: 0.1
     backfaceThreshold: 100
   m_SceneGUID: 00000000000000000000000000000000
   m_OcclusionCullingData: {fileID: 0}
@@ -3667,6 +3667,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TubaDziura (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 7380001224378527549, guid: a077c3b2d81596e438f543e3f740f469,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 7863523198333613447, guid: a077c3b2d81596e438f543e3f740f469,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -4058,6 +4063,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: "\u0141uk (4)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 514262817987386992, guid: d67ef8fa8cb2b2a4fa9fde536afe3273,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 894201893606393034, guid: d67ef8fa8cb2b2a4fa9fde536afe3273,
         type: 3}
@@ -5490,6 +5500,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: "\u0141uk (6)"
       objectReference: {fileID: 0}
+    - target: {fileID: 514262817987386992, guid: d67ef8fa8cb2b2a4fa9fde536afe3273,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 894201893606393034, guid: d67ef8fa8cb2b2a4fa9fde536afe3273,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -5765,6 +5780,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: "\u0141uk (9)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 514262817987386992, guid: d67ef8fa8cb2b2a4fa9fde536afe3273,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 894201893606393034, guid: d67ef8fa8cb2b2a4fa9fde536afe3273,
         type: 3}
@@ -7741,6 +7761,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TubaDziura
+      objectReference: {fileID: 0}
+    - target: {fileID: 7380001224378527549, guid: a077c3b2d81596e438f543e3f740f469,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 7863523198333613447, guid: a077c3b2d81596e438f543e3f740f469,
         type: 3}
@@ -10143,6 +10168,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TubaDziura (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 7380001224378527549, guid: a077c3b2d81596e438f543e3f740f469,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 7863523198333613447, guid: a077c3b2d81596e438f543e3f740f469,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -10236,6 +10266,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TubaDziura (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7380001224378527549, guid: a077c3b2d81596e438f543e3f740f469,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 7863523198333613447, guid: a077c3b2d81596e438f543e3f740f469,
         type: 3}
@@ -27869,6 +27904,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TubaDziura (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7380001224378527549, guid: a077c3b2d81596e438f543e3f740f469,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 7863523198333613447, guid: a077c3b2d81596e438f543e3f740f469,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -42840,6 +42880,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TruckHelloIT
       objectReference: {fileID: 0}
+    - target: {fileID: 3619467750484114484, guid: 7077ad53f4caaaf4c936a917d9d13597,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4139157782197053070, guid: 7077ad53f4caaaf4c936a917d9d13597,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -44601,6 +44646,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: "\u0141uk (5)"
       objectReference: {fileID: 0}
+    - target: {fileID: 514262817987386992, guid: d67ef8fa8cb2b2a4fa9fde536afe3273,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 894201893606393034, guid: d67ef8fa8cb2b2a4fa9fde536afe3273,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -44789,6 +44839,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TubaDziura (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7380001224378527549, guid: a077c3b2d81596e438f543e3f740f469,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 7863523198333613447, guid: a077c3b2d81596e438f543e3f740f469,
         type: 3}
@@ -67128,6 +67183,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TubaDziura (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 7380001224378527549, guid: a077c3b2d81596e438f543e3f740f469,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 7863523198333613447, guid: a077c3b2d81596e438f543e3f740f469,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -67652,6 +67712,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: "\u0141uk (1)"
       objectReference: {fileID: 0}
+    - target: {fileID: 514262817987386992, guid: d67ef8fa8cb2b2a4fa9fde536afe3273,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 894201893606393034, guid: d67ef8fa8cb2b2a4fa9fde536afe3273,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -67991,6 +68056,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TubaDziura (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7380001224378527549, guid: a077c3b2d81596e438f543e3f740f469,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 7863523198333613447, guid: a077c3b2d81596e438f543e3f740f469,
         type: 3}
@@ -68959,6 +69029,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TubaDziura (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7380001224378527549, guid: a077c3b2d81596e438f543e3f740f469,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 7863523198333613447, guid: a077c3b2d81596e438f543e3f740f469,
         type: 3}
@@ -70091,6 +70166,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: "\u0141uk (8)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 514262817987386992, guid: d67ef8fa8cb2b2a4fa9fde536afe3273,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 894201893606393034, guid: d67ef8fa8cb2b2a4fa9fde536afe3273,
         type: 3}
@@ -74343,6 +74423,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: "\u0141uk (3)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 514262817987386992, guid: d67ef8fa8cb2b2a4fa9fde536afe3273,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 894201893606393034, guid: d67ef8fa8cb2b2a4fa9fde536afe3273,
         type: 3}
@@ -81656,6 +81741,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TubaDziura (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 7380001224378527549, guid: a077c3b2d81596e438f543e3f740f469,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 7863523198333613447, guid: a077c3b2d81596e438f543e3f740f469,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -85328,6 +85418,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TubaDziura (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 7380001224378527549, guid: a077c3b2d81596e438f543e3f740f469,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 7863523198333613447, guid: a077c3b2d81596e438f543e3f740f469,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -86107,6 +86202,16 @@ PrefabInstance:
       propertyPath: _audioSource
       value: 
       objectReference: {fileID: 1486251266}
+    - target: {fileID: 3143105958794494509, guid: 287942068bef3de4d999e3df375b87af,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 576.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3143105958794494509, guid: 287942068bef3de4d999e3df375b87af,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -301.5501
+      objectReference: {fileID: 0}
     - target: {fileID: 3413104033398170476, guid: 287942068bef3de4d999e3df375b87af,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -86146,6 +86251,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -178
+      objectReference: {fileID: 0}
+    - target: {fileID: 4600366427162093665, guid: 287942068bef3de4d999e3df375b87af,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5107148552128154426, guid: 287942068bef3de4d999e3df375b87af,
         type: 3}
@@ -87341,6 +87451,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TubaDziura (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7380001224378527549, guid: a077c3b2d81596e438f543e3f740f469,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 7863523198333613447, guid: a077c3b2d81596e438f543e3f740f469,
         type: 3}
@@ -89419,6 +89534,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: "\u0141uk"
+      objectReference: {fileID: 0}
+    - target: {fileID: 514262817987386992, guid: d67ef8fa8cb2b2a4fa9fde536afe3273,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 894201893606393034, guid: d67ef8fa8cb2b2a4fa9fde536afe3273,
         type: 3}
@@ -96875,6 +96995,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: "\u0141uk (7)"
       objectReference: {fileID: 0}
+    - target: {fileID: 514262817987386992, guid: d67ef8fa8cb2b2a4fa9fde536afe3273,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 894201893606393034, guid: d67ef8fa8cb2b2a4fa9fde536afe3273,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -98842,6 +98967,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trasa1
       objectReference: {fileID: 0}
+    - target: {fileID: 1424834543630943585, guid: ad389477435b7744dbb49549d561bd76,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2318541519155865668, guid: ad389477435b7744dbb49549d561bd76,
         type: 3}
       propertyPath: m_Mesh
@@ -99024,6 +99154,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TubaDziura V2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962329020647503919, guid: 21b8a6d8e61859f45834865fbcd645fb,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 127
       objectReference: {fileID: 0}
     - target: {fileID: 6181741491125618535, guid: 21b8a6d8e61859f45834865fbcd645fb,
         type: 3}

@@ -27,6 +27,8 @@ public class PlayerCarController : MonoBehaviour
 
     private void Start()
     {
+        _audioSource.enabled = false;
+        _audioSource.enabled = true;
         _audioSource.volume = Mathf.Clamp(AudioController.Instance.sfxVolume - _soundDifference, 0.15f, 1.0f);
 
     }
