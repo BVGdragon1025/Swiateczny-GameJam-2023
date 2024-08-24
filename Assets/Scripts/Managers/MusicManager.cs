@@ -39,13 +39,14 @@ public class MusicManager : MonoBehaviour
     {
         //int songSelection = 0;
         //Debug.Log($"Now rolled: {songSelection}");
-        var songSelection = new System.Random();
-        int randomVar = songSelection.Next(0, _musicList.Count);
+        //var songSelection = new System.Random();
+        //int randomVar = songSelection.Next(0, _musicList.Count);
+        int songSelection = Random.Range(0, _musicList.Count);
         
-        Debug.Log($"Now rolled: {randomVar}");
+        Debug.Log($"Now rolled: {songSelection}");
 
-        _controller.PlayMusic(_musicList[randomVar], _audioSource);
-        Debug.Log($"Now playing: {_musicList[randomVar].name}, Amount of songs: {_musicList.Count}, Random number: {randomVar}");
+        _controller.PlayMusic(_musicList[songSelection], _audioSource);
+        Debug.Log($"Now playing: {_musicList[songSelection].name}, Amount of songs: {_musicList.Count}, Random number: {songSelection}");
 
     }
 

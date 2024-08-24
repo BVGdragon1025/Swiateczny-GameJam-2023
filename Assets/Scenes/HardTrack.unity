@@ -34338,7 +34338,7 @@ MonoBehaviour:
   height: 5
   rotationDamping: 3
   heightDamping: 1.5
-  zoomRatio: 1
+  zoomRatio: 0.6
   defaultFOV: 60
 --- !u!114 &902206728
 MonoBehaviour:
@@ -54147,16 +54147,6 @@ PrefabInstance:
       propertyPath: _audioSource
       value: 
       objectReference: {fileID: 1486251266}
-    - target: {fileID: 3143105958794494509, guid: 287942068bef3de4d999e3df375b87af,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 576.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3143105958794494509, guid: 287942068bef3de4d999e3df375b87af,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -301.5501
-      objectReference: {fileID: 0}
     - target: {fileID: 3413104033398170476, guid: 287942068bef3de4d999e3df375b87af,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

@@ -12,11 +12,11 @@ public class FollowPlayer : MonoBehaviour
     public float zoomRatio = 0.5f;
     public float defaultFOV = 60f;
 
-    private Vector3 rotationVector;
+    private Vector3 _rotationVector;
 
     void LateUpdate()
     {
-        float wantedAngle = rotationVector.y;
+        float wantedAngle = _rotationVector.y;
         float wantedHeight = car.position.y + height;
         float myAngle = transform.eulerAngles.y;
         float myHeight = transform.position.y;
@@ -38,17 +38,17 @@ public class FollowPlayer : MonoBehaviour
         Vector3 localVelocity = car.InverseTransformDirection(car.GetComponent<Rigidbody>().velocity);
         if (localVelocity.z < -0.1f)
         {
-            Vector3 temp = rotationVector; //because temporary variables seem to be removed after a closing bracket "}" we can use the same variable name multiple times.
+            Vector3 temp = _rotationVector;
             temp.y = car.eulerAngles.y + 180;
-            rotationVector = temp;
+            _rotationVector = temp;
         }
         else
         {
-            Vector3 temp = rotationVector;
+            Vector3 temp = _rotationVector;
             temp.y = car.eulerAngles.y;
-            rotationVector = temp;
+            _rotationVector = temp;
         }
         float acc = car.GetComponent<Rigidbody>().velocity.magnitude;
-        GetComponent<Camera>().fieldOfView = defaultFOV + acc * zoomRatio * Time.deltaTime;  //he removed * Time.deltaTime but it works better if you leave it like this.
+        GetComponent<Camera>().fieldOfView = defaultFOV + acc * zoomRatio;
     }
 }
