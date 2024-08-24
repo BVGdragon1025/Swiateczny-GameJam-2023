@@ -21,6 +21,8 @@ public class CheckpointController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _audioSource.enabled = false;
+        _audioSource.enabled = true;
         _isCrossed = false;
         
     }
