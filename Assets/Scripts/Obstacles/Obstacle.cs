@@ -13,6 +13,8 @@ public abstract class Obstacle : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        audioSource.enabled = false;
+        audioSource.enabled = true;
     }
 
     private void OnCollisionEnter(Collision collision)
